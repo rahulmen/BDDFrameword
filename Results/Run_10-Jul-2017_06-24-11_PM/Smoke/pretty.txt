@@ -1,0 +1,18 @@
+@Feature1
+Feature: Book flight tickets
+  As a user with valid credentials,
+  I want to be able to search for flight tickets between a given source and destination,
+  select from the available options presented, and book the tickets accordingly
+
+  Background:                                                                   # BookFlightTickets.feature:7
+    Given I am in the login page of the application                             # GeneralStepDefs.i_am_in_login_page()
+    And I login using the valid username mercury and the valid password mercury # LoginStepDefs.i_login_using_valid_username_valid_password(String,String)
+The confirmation number is: 2017-07-10055408
+
+  @completed
+  Scenario: Find and book flight tickets                                # BookFlightTickets.feature:12
+    Given I search for flights using the following criteria:            # BookFlightTicketsStepDefs.i_search_for_flights(DataTable)
+    And I select the first available flight                             # BookFlightTicketsStepDefs.i_select_first_available_flight()
+    And I book the tickets using the following passenger details:       # BookFlightTicketsStepDefs.i_book_tickets(DataTable)
+    And I use the following credit card details:                        # BookFlightTicketsStepDefs.i_use_credit_card(DataTable)
+    Then I should get a booking confirmation with a confirmation number # BookFlightTicketsStepDefs.i_should_get_booking_confirmation()

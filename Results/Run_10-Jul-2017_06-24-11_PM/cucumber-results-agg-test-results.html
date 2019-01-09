@@ -1,0 +1,61 @@
+<html>
+<head><style type="text/css">h1 {background-color:#9999CC}
+h2 {background-color:#BBBBCC}
+h3 {background-color:#DDDDFF}
+th {border:1px solid black;background-color:#CCCCDD;}
+td{border:1px solid black;}
+table {border:1px solid black;border-collapse: collapse;}
+.chart {border:0px none black;border-collapse: collapse;background-color: none;}
+.passed {background-color:lightgreen;font-weight:bold;color:darkgreen}
+.failed {background-color:tomato;font-weight:bold;color:darkred}
+.undefined {background-color:gold;font-weight:bold;color:goldenrod}
+.skipped {background-color:silver;font-weight:bold;color:darkgray}
+.passed_description {background-color:#D0FFD0;font-weight:bold;font-style:italic;color:black}
+.failed_description {background-color:#FFA898;font-weight:bold;font-style:italic;color:black}
+OL { counter-reset: item }
+OL>LI { display: block }
+OL>LI:before { content: counters(item, ".") " "; counter-increment: item }
+
+div.header {
+    display: block; text-align: center;
+    position: running(header);
+}
+div.footer {
+    display: block; text-align: center;
+    position: running(footer);
+}
+div.content {page-break-after: always;}
+@page {
+	 size: __PAGESIZE__;
+     @top-center {
+     	content: "Detailed Results Report";
+	    color: silver;
+	    font-size: 14px;
+     }
+     @top-right {
+     	content: date("dd MMM, yyyy hh:mm");
+	    color: silver;
+	    font-size: 8px;
+     }
+    @bottom-right {
+    	content: "Page " counter(page) " of " counter(pages) ;
+	    color: silver;
+	    font-size: 8px;
+    }
+}
+ol a::after {
+  content: leader('.') target-counter(attr(href), page);
+}
+</style>
+<title>Detailed Results Report</title>
+  </head>
+  <body>
+    <div class='header'></div>
+    <div class='footer'></div>
+  <h1>Overview</h1>
+<table><tr><th></th><th>Passed</th><th>Failed</th><th>Undefined</th><th>%Passed</th></tr><tr><th>Features</th><td class="passed">1</td><td class="failed">0</td><td class="undefined">0</td><td>100.00</td></tr><tr><th>Scenarios</th><td class="passed">1</td><td class="failed">0</td><td class="undefined">0</td><td>100.00</td></tr><tr><th>Steps</th><td class="passed">7</td><td class="failed">0</td><td class="undefined">0</td><td>100.00</td></tr></table><div><b>Overall Duration: 0h 00m 20s</b></div>
+<a id="top"></a><h1>Table of Contents</h1><ol><li> <span class="passed"><a href="#feature-2book-flight-tickets">Book flight tickets</a></span><ol><li> <span class="passed"><a href="#sc-12-book-flight-tickets;find-and-book-flight-tickets">Find and book flight tickets</a></span></li></ol></li></ol><h1>Detailed Results Report</h1><table width="700px"><tr class="passed"><td colspan="4"><b>Feature:</b> <a id="feature-2book-flight-tickets">Book flight tickets</a></td></tr><tr class="passed_description"><td colspan="4"><br>As a user with valid credentials,</br><br>
+I want to be able to search for flight tickets between a given source and destination,</br><br>
+select from the available options presented, and book the tickets accordingly</br></td></tr><tr class="passed"><td><small><b>Passed:</b> 1</small></td><td><small><b>Failed:</b> 0</small></td><td><small><b>Undefined:</b> 0</small></td><td><small>Duration: 20.75s</small></td></tr><tr class="passed"><td colspan="4" style="padding-left:20px"> <table width="100%"><tr class="passed"><td colspan="4"><b>Background:</b> <a id="sc-null"></a></td></tr><tr class="passed_description"><td colspan="4"><br></br></td></tr><tr class="passed"><td><small><b>Passed:</b> 2</small></td><td><small><b>Failed:</b> 0</small></td><td><small><b>Undefined:</b> 0</small></td><td><small>Duration: 7.13s</small></td></tr><tr class="passed"><td colspan="4" style="padding-left:20px"> <table width="100%"><tr class="passed"><td><b>Given </b> I am in the login page of the application</td><td width="100">3.51s</td></tr><tr class="passed"><td colspan="2"><img src="./screenshotbackground1499691251842.png"  /></td></tr><tr class="passed"><td><b>And </b> I login using the valid username mercury and the valid password mercury</td><td width="100">3.62s</td></tr><tr class="passed"><td colspan="2"><img src="./screenshotbackground1499691251843.png"  /></td></tr></table></td></tr><tr><td colspan="5"><sup><a href="#top">Back to Table of Contents</a></sup></td></tr><tr class="passed"><td colspan="4"><b>Scenario:</b> <a id="sc-12-book-flight-tickets;find-and-book-flight-tickets">Find and book flight tickets</a></td></tr><tr class="passed_description"><td colspan="4"><br></br></td></tr><tr class="passed"><td><small><b>Passed:</b> 5</small></td><td><small><b>Failed:</b> 0</small></td><td><small><b>Undefined:</b> 0</small></td><td><small>Duration: 13.62s</small></td></tr><tr class="passed"><td>Before</td><td colspan="2"></td><td width="100">6.97s</td></tr><tr class="passed"><td colspan="4"><br></br></td></tr><tr class="passed"><td colspan="4" style="padding-left:20px"> <table width="100%"><tr class="passed"><td><b>Given </b> I search for flights using the following criteria:</td><td width="100">1.94s</td></tr><tr class="passed"><td style="padding-left:20px" colspan="2"><table><tr><td>FromPort</td><td>FromMonth</td><td>FromDate</td><td>ToPort</td><td>ToMonth</td><td>ToDate</td><td>Airline</td><td>PassengerCount</td></tr><tr><td>London</td><td>July</td><td>23</td><td>Paris</td><td>July</td><td>29</td><td>Unified Airlines</td><td>2</td></tr></table></td></tr><tr class="passed"><td colspan="2"><img src="./screenshot12-book-flight-tickets_find-and-book-flight-tickets1499691251844.png"  /></td></tr><tr class="passed"><td><b>And </b> I select the first available flight</td><td width="100">1.24s</td></tr><tr class="passed"><td colspan="2"><img src="./screenshot12-book-flight-tickets_find-and-book-flight-tickets1499691251845.png"  /></td></tr><tr class="passed"><td><b>And </b> I book the tickets using the following passenger details:</td><td width="100">0.38s</td></tr><tr class="passed"><td style="padding-left:20px" colspan="2"><table><tr><td>FirstName</td><td>LastName</td></tr><tr><td>iCIMS</td><td>Labs</td></tr><tr><td>QA</td><td>Automation</td></tr></table></td></tr><tr class="passed"><td><b>And </b> I use the following credit card details:</td><td width="100">1.57s</td></tr><tr class="passed"><td style="padding-left:20px" colspan="2"><table><tr><td>CreditCardType</td><td>CreditCardNumber</td></tr><tr><td>MasterCard</td><td>1234567890</td></tr></table></td></tr><tr class="passed"><td colspan="2"><img src="./screenshot12-book-flight-tickets_find-and-book-flight-tickets1499691251845.png"  /></td></tr><tr class="passed"><td><b>Then </b> I should get a booking confirmation with a confirmation number</td><td width="100">0.18s</td></tr><tr class="passed"><td colspan="2"><img src="./screenshot12-book-flight-tickets_find-and-book-flight-tickets1499691251846.png"  /></td></tr></table></td></tr><tr class="passed"><td>After</td><td colspan="2"></td><td width="100">1.34s</td></tr><tr class="passed"><td colspan="4"><br></br></td></tr><tr><td colspan="5"><sup><a href="#top">Back to Table of Contents</a></sup></td></tr></table></td></tr><tr><td colspan="5"></td></tr></table>
+	</body>
+</html>
