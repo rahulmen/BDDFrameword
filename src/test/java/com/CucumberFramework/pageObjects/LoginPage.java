@@ -32,10 +32,10 @@ public class LoginPage extends MasterStepDefs {
 	public static final String moveID = "//*[@value='MOVE ID']";
 	public static final String movePassword = "//*[@value='Password']";
 
-	@SuppressWarnings("rawtypes")
+	/*@SuppressWarnings("rawtypes")
 	AppiumDriver driver = DriverManager.getAppiumDriver();
-	
-	public void login(String userName, String password) {
+	*/
+	/*public void login(String userName, String password) {
 		//SeleniumTestParameters testParameters = DriverManager.getTestParameters();
 		driver.context("NATIVE_APP");
 		try {
@@ -55,6 +55,6 @@ public class LoginPage extends MasterStepDefs {
 		} catch (Exception e) {
 			log.error("Unable to login " + e.getMessage());
 		}
-	}
+	}*/
 
 }

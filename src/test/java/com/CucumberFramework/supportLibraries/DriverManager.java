@@ -43,7 +43,7 @@ public class DriverManager {
 	}
 
 	// AppiumDriver Object Creation
-
+/*
 	@SuppressWarnings("rawtypes")
 	public static AppiumDriver getAppiumDriver() {
 		if (appiumDriver.get() == null) {
@@ -53,7 +53,7 @@ public class DriverManager {
 		}
 		log.debug("Getting instance of remote driver" + appiumDriver.get().getClass());
 		return appiumDriver.get();
-	}
+	}*/
 	
 	// SeetestDriver Object Creation
 /*	public static MobileWebDriver getSeetestDriver() {
@@ -66,11 +66,11 @@ public class DriverManager {
 		return seetestDriver.get();
 	}*/
 
-	@SuppressWarnings("rawtypes")
+/*	@SuppressWarnings("rawtypes")
 	public static void setAppiumDriver(AppiumDriver driver) {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		DriverManager.appiumDriver.set(driver);
-	}
+	}*/
 
 	public static void setWebDriver(WebDriver driver) {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -88,6 +88,7 @@ public class DriverManager {
 	}
 
 	public static SeleniumTestParameters getTestParameters() {
+		System.out.println(testParameters.get());
 		return testParameters.get();
 	}
 }

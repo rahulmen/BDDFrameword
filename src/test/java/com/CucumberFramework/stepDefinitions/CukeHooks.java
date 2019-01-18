@@ -43,6 +43,8 @@ public class CukeHooks extends MasterStepDefs {
 			propertiesFileAccess = properties;
 			Thread.sleep(2000);
 			currentTestParameters = DriverManager.getTestParameters();
+			
+			System.out.println(scenario.getName());
 			currentTestParameters.setScenarioName(scenario.getName());
 			log.info("Running the Scenario : " + scenario.getName());
 			if (Boolean.parseBoolean(properties.getProperty("ExecuteInMobile"))) {
@@ -86,11 +88,11 @@ public class CukeHooks extends MasterStepDefs {
 		case PERFECTO:
 		case MINT:
 
-			log.info(
+			/*log.info(
 					"Running the Scenario : " + scenario.getName() + " in " + currentTestParameters.getExecutionMode());
 			AppiumDriver driver = DriverFactory.createInstance(currentTestParameters);
 			DriverManager.setAppiumDriver(driver);
-			break;
+			break;*/
 
 		case SEETEST:
 
@@ -116,10 +118,10 @@ public class CukeHooks extends MasterStepDefs {
 			if (Boolean.valueOf(properties.getProperty("TrackIssuesInJira"))) {
 				//updateDefectInJira(scenario);
 			}
-			if (Boolean.parseBoolean(properties.getProperty("ExecuteInMobile"))
+			/*if (Boolean.parseBoolean(properties.getProperty("ExecuteInMobile"))
 					&& Boolean.valueOf(properties.getProperty("PerfectoReportGeneration"))) {
 				capturePerfectoReportsForMobile(scenario);
-			}
+			}*/
 		} catch (Exception ex) {
 			ex.printStackTrace();
 			log.error("Problem while closing the Driver Object " + ex.getMessage());
@@ -128,12 +130,12 @@ public class CukeHooks extends MasterStepDefs {
 
 			if (Boolean.parseBoolean(properties.getProperty("ExecuteInMobile"))) {
 				if (currentTestParameters.getExecutionMode() == ExecutionMode.SEETEST) {
-				
+				System.out.println();
 				} else {
-					AppiumDriver driver = DriverManager.getAppiumDriver();
+					/*AppiumDriver driver = DriverManager.getAppiumDriver();
 					if (driver != null) {
 						driver.quit();
-					}
+					}*/
 				}
 			} else {
 				WebDriver driver = DriverManager.getWebDriver();
@@ -187,7 +189,7 @@ public class CukeHooks extends MasterStepDefs {
 		return fileName;
 	}
 
-	@SuppressWarnings("rawtypes")
+	/*@SuppressWarnings("rawtypes")
 	private void capturePerfectoReportsForMobile(Scenario scenario) {
 		try {
 			AppiumDriver driver = DriverManager.getAppiumDriver();
@@ -207,7 +209,7 @@ public class CukeHooks extends MasterStepDefs {
 
 		}
 	}
-
+*/
 	private void capturePerfectoReportForDesktop(Scenario scenario, SeleniumTestParameters testParametrs,
 			WebDriver driver) {
 		if (Boolean.valueOf(properties.getProperty("PerfectoReportGeneration"))) {

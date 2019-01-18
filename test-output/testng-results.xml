@@ -2,19 +2,19 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2221" started-at="2019-01-18T10:28:33Z" finished-at="2019-01-18T10:28:36Z">
+  <suite name="Run Test Cukes" duration-ms="25567" started-at="2019-01-18T12:33:09Z" finished-at="2019-01-18T12:33:35Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.CucumberFramework.TestNGrunners.RunCucumberTests_Smoke@934b52f]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.CucumberFramework.TestNGrunners.RunCucumberTests_Smoke@23e3f5cd]" name="Regression Tests of MOVE in iOS Perfecto for iPhone 7 - feature - " class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="2221" started-at="2019-01-18T10:28:33Z" finished-at="2019-01-18T10:28:36Z">
+    <test name="Regression Tests of MOVE in iOS Perfecto for iPhone 7" duration-ms="25567" started-at="2019-01-18T12:33:09Z" finished-at="2019-01-18T12:33:35Z">
       <class name="com.CucumberFramework.TestNGrunners.RunCucumberTests_Smoke">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.CucumberFramework.TestNGrunners.RunCucumberTests_Smoke@934b52f]" name="setUpClass" is-config="true" duration-ms="616" started-at="2019-01-18T15:58:33Z" finished-at="2019-01-18T15:58:34Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.CucumberFramework.TestNGrunners.RunCucumberTests_Smoke@23e3f5cd]" name="setUpClass" is-config="true" duration-ms="651" started-at="2019-01-18T18:03:09Z" finished-at="2019-01-18T18:03:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.CucumberFramework.TestNGrunners.RunCucumberTests_Smoke@934b52f]" name="feature" duration-ms="933" started-at="2019-01-18T15:58:34Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2019-01-18T15:58:35Z">
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.CucumberFramework.TestNGrunners.RunCucumberTests_Smoke@23e3f5cd]" name="Regression Tests of MOVE in iOS Perfecto for iPhone 7 - feature - " duration-ms="24171" started-at="2019-01-18T18:03:10Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2019-01-18T18:03:34Z">
           <params>
             <param index="0">
               <value>
@@ -24,20 +24,20 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.CucumberFramework.TestNGrunners.RunCucumberTests_Smoke@934b52f]" name="tearDownClass" is-config="true" duration-ms="61" started-at="2019-01-18T15:58:35Z" finished-at="2019-01-18T15:58:35Z">
+        </test-method> <!-- Regression Tests of MOVE in iOS Perfecto for iPhone 7 - feature -  -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.CucumberFramework.TestNGrunners.RunCucumberTests_Smoke@23e3f5cd]" name="tearDownClass" is-config="true" duration-ms="66" started-at="2019-01-18T18:03:34Z" finished-at="2019-01-18T18:03:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-        <test-method status="PASS" signature="test()[pri:0, instance:com.CucumberFramework.TestNGrunners.RunCucumberTests_Smoke@934b52f]" name="test" is-config="true" duration-ms="351" started-at="2019-01-18T15:58:35Z" finished-at="2019-01-18T15:58:36Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:com.CucumberFramework.TestNGrunners.RunCucumberTests_Smoke@23e3f5cd]" name="test" is-config="true" duration-ms="349" started-at="2019-01-18T18:03:34Z" finished-at="2019-01-18T18:03:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="copyStoredReports()[pri:0, instance:com.CucumberFramework.TestNGrunners.RunCucumberTests_Smoke@934b52f]" name="copyStoredReports" is-config="true" duration-ms="0" started-at="2019-01-18T15:58:36Z" finished-at="2019-01-18T15:58:36Z">
+        <test-method status="PASS" signature="copyStoredReports()[pri:0, instance:com.CucumberFramework.TestNGrunners.RunCucumberTests_Smoke@23e3f5cd]" name="copyStoredReports" is-config="true" duration-ms="1" started-at="2019-01-18T18:03:35Z" finished-at="2019-01-18T18:03:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- copyStoredReports -->
       </class> <!-- com.CucumberFramework.TestNGrunners.RunCucumberTests_Smoke -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Regression Tests of MOVE in iOS Perfecto for iPhone 7 -->
+  </suite> <!-- Run Test Cukes -->
 </testng-results>

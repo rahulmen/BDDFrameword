@@ -1,0 +1,17 @@
+@Feature1
+Feature: Book flight tickets
+  As a user with valid credentials,
+  I want to be able to search for flight tickets between a given source and destination,
+  select from the available options presented, and book the tickets accordingly
+
+  Background:                                                                   # BookFlightTickets.feature:7
+    Given I am in the login page of the application
+    And I login using the valid username mercury and the valid password mercury
+
+  @completed
+  Scenario: Find and book flight tickets                                # BookFlightTickets.feature:12
+    Given I search for flights using the following criteria:
+    And I select the first available flight
+    And I book the tickets using the following passenger details:
+    And I use the following credit card details:
+    Then I should get a booking confirmation with a confirmation number

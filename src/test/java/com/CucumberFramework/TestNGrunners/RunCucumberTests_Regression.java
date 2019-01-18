@@ -31,8 +31,8 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
  * I'm using to take a screenshot if scenario fails.
  */
 @CucumberOptions(features = "src/test/resources/features", 
-	glue = { "com.CucumberCraft.stepDefinitions" }, 
-	tags = { "@tag1, @tag2" }, 
+	glue = { "com.CucumberFramework.stepDefinitions" }, 
+	tags = { "@completed" }, 
 	monochrome = true,
 	plugin = { 
 		"pretty", 

@@ -28,7 +28,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
  */
 @CucumberOptions(
 
-		features = "src/test/resources/features", glue = { "com.CucumberCraft.stepDefinitions" }, tags = {
+		features = "src/test/resources/features", glue = { "com.CucumberFramework.stepDefinitions" }, tags = {
 				"@Feature1" }, monochrome = true, plugin = { "pretty", "pretty:target/cucumber-report/Smoke/pretty.txt",
 						"html:target/cucumber-report/Smoke", "json:target/cucumber-report/Smoke/cucumber.json",
 						"junit:target/cucumber-report/Smoke/cucumber-junitreport.xml",

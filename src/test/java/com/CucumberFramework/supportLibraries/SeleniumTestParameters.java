@@ -206,7 +206,9 @@ public class SeleniumTestParameters {
 	}
 
 	public void setScenarioName(String scenarioName) {
+		System.out.println(scenarioName);
 		this.scenarioName = scenarioName;
+		System.out.println(this.scenarioName);
 	}
 
 	public String getScenarioName() {
