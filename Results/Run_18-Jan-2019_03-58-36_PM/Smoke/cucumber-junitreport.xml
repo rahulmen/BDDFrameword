@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="1" time="0">
+<testcase classname="Book flight tickets" name="Find and book flight tickets" time="0">
+<skipped><![CDATA[Given I am in the login page of the application.............................undefined
+And I login using the valid username mercury and the valid password mercury.undefined
+Given I search for flights using the following criteria:....................undefined
+And I select the first available flight.....................................undefined
+And I book the tickets using the following passenger details:...............undefined
+And I use the following credit card details:................................undefined
+Then I should get a booking confirmation with a confirmation number.........undefined
+]]></skipped>
+</testcase>
+</testsuite>

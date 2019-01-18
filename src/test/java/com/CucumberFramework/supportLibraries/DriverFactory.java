@@ -1,13 +1,13 @@
 package com.CucumberFramework.supportLibraries;
 
-import io.appium.java_client.AppiumDriver;
-
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 
-import com.experitest.selenium.MobileWebDriver;
+
+
+import io.appium.java_client.AppiumDriver;
 
 /**
  * DriverFactory which will create respective driver Object
@@ -107,7 +107,7 @@ public class DriverFactory {
 	 * Seetest Driver initialization
 	 *
 	 */
-	public static MobileWebDriver createInstanceSeetestDriver(
+	/*public static MobileWebDriver createInstanceSeetestDriver(
 			SeleniumTestParameters testParameters) {
 		MobileWebDriver driver = null;
 		try {
@@ -147,5 +147,5 @@ public class DriverFactory {
 		}
 		return driver;
 	}
-
+*/
 }

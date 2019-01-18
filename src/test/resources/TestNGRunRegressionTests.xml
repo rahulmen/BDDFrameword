@@ -23,7 +23,7 @@
 		<parameter name="ExecutionMode" value="LOCAL" />
 		<parameter name="BrowserName" value="CHROME" />
 		<classes>
-			<class name="com.CucumberCraft.TestNGrunners.RunCucumberTests_Smoke" />
+			<class name="com.CucumberFramework.TestNGrunners.RunCucumberTests_Smoke" />
 		</classes>
 	</test>
 

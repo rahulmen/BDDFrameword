@@ -8,10 +8,7 @@ import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.CucumberFramework.supportLibraries.Browser;
@@ -19,12 +16,10 @@ import com.CucumberFramework.supportLibraries.DriverFactory;
 import com.CucumberFramework.supportLibraries.DriverManager;
 import com.CucumberFramework.supportLibraries.ExecutionMode;
 import com.CucumberFramework.supportLibraries.PerfectoLabUtils;
-import com.CucumberFramework.supportLibraries.RestApiForJira;
 import com.CucumberFramework.supportLibraries.SeleniumTestParameters;
 import com.CucumberFramework.supportLibraries.Settings;
 import com.CucumberFramework.supportLibraries.TimeStamp;
 import com.CucumberFramework.supportLibraries.Util;
-import com.experitest.selenium.MobileWebDriver;
 import com.github.mkolisnyk.cucumber.reporting.CucumberResultsOverview;
 
 import cucumber.api.Scenario;
@@ -101,8 +96,7 @@ public class CukeHooks extends MasterStepDefs {
 
 			log.info(
 					"Running the Scenario : " + scenario.getName() + " in " + currentTestParameters.getExecutionMode());
-			MobileWebDriver seetestDriver = DriverFactory.createInstanceSeetestDriver(currentTestParameters);
-			DriverManager.setSeetestDriver(seetestDriver);
+
 			break;
 
 		default:
@@ -120,7 +114,7 @@ public class CukeHooks extends MasterStepDefs {
 	public void embedScreenshot(Scenario scenario) {
 		try {
 			if (Boolean.valueOf(properties.getProperty("TrackIssuesInJira"))) {
-				updateDefectInJira(scenario);
+				//updateDefectInJira(scenario);
 			}
 			if (Boolean.parseBoolean(properties.getProperty("ExecuteInMobile"))
 					&& Boolean.valueOf(properties.getProperty("PerfectoReportGeneration"))) {
@@ -134,10 +128,7 @@ public class CukeHooks extends MasterStepDefs {
 
 			if (Boolean.parseBoolean(properties.getProperty("ExecuteInMobile"))) {
 				if (currentTestParameters.getExecutionMode() == ExecutionMode.SEETEST) {
-					MobileWebDriver driver = DriverManager.getSeetestDriver();
-					driver.client.releaseDevice("*", true, false, true);
-					driver.client.releaseClient();
-					driver.quit();
+				
 				} else {
 					AppiumDriver driver = DriverManager.getAppiumDriver();
 					if (driver != null) {
@@ -159,14 +150,12 @@ public class CukeHooks extends MasterStepDefs {
 	 * Task in JIRA
 	 * @throws IOException 
 	 */
-	private void updateDefectInJira(Scenario scenario) throws IOException {
+	/*private void updateDefectInJira(Scenario scenario) throws IOException {
 		if (scenario.isFailed()) {
 			try {
 				if (Boolean.parseBoolean(properties.getProperty("ExecuteInMobile"))) {
 					if (currentTestParameters.getExecutionMode() == ExecutionMode.SEETEST) {
 						
-						byte[] screenshot = Util.takeScreenshot(DriverManager.getSeetestDriver());
-						scenario.embed(screenshot, "image/png");
 					} else {
 						byte[] screenshot = Util.takeScreenshot(DriverManager.getAppiumDriver());
 						scenario.embed(screenshot, "image/png");
@@ -184,7 +173,7 @@ public class CukeHooks extends MasterStepDefs {
 				log.error(somePlatformsDontSupportScreenshots.getMessage());
 			}
 		}
-	}
+	}*/
 
 	private String getFileName(Browser browser, String deviceName) {
 		String fileName = "";

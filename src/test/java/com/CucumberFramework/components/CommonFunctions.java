@@ -1,4 +1,4 @@
-package com.CucumberFramework.components;
+/*package com.CucumberFramework.components;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.io.FileInputStream;
@@ -79,11 +79,11 @@ public class CommonFunctions {
 
 	}
 	
-	/********************************************************
+	*//********************************************************
 	 * Function to initialize WebDriver instance
 	 * @param WebDriver
 	 ******************************************************
-	 */
+	 *//*
 	
 
 	public static void initialize(){
@@ -119,12 +119,12 @@ public class CommonFunctions {
 			driver.get(properties.getProperty("WebURL"));
 			}
 
-	/*******************************************************
+	*//*******************************************************
 	 * Function to Check whether Frame is present ON web page or not
 	 * @param frameId
 	 * @return
 	 * ******************************************************
-	 */
+	 *//*
 	public boolean isFramePresent(String frameId)
 	{
 		try {
@@ -144,13 +144,13 @@ public class CommonFunctions {
 		}
 	}	
 
-	/*******************************************************
+	*//*******************************************************
 	 * Function to check whether Element is present on page
 	 * 
 	 * @Modified by pxg0fzc on 13 October
 	 *	
 	 *****************************************************
-	 */
+	 *//*
 	public boolean isElementPresent(By by)
 	{
 		try 
@@ -165,7 +165,7 @@ public class CommonFunctions {
 	}
 
 
-	/**********************************************************
+	*//**********************************************************
 	 *Function to  Verify if element is present on page
 	 * 
 	 * @param strObjectProperty
@@ -173,7 +173,7 @@ public class CommonFunctions {
 	 * @param strFindElementType
 	 *            - Element type to search by.
 	 * @return returns true if the element exist, otherwise, false.
-	 ***************************************************/
+	 ***************************************************//*
 	public boolean isElementPresent(String strObjectProperty, String strFindElementType){
 		WebElement elemToFind = null;
 		try{
@@ -208,7 +208,7 @@ public class CommonFunctions {
 		}
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify if an element exists on the Webpage
 	 * Does not print error to log if element is not found
@@ -236,7 +236,7 @@ public class CommonFunctions {
 	 *   
 	 * @author 387478  
 	 ************************************************************* 
-	 */
+	 *//*
 	public boolean isElementPresent(String locatorType, String property, String objName, Boolean printError){
 		WebElement elemToFind = null;
 		try{	    	
@@ -261,7 +261,7 @@ public class CommonFunctions {
 	}
 
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify if an element is present in the application, not using
 	 * OR.
@@ -275,7 +275,7 @@ public class CommonFunctions {
 	 *            XPATH or CSS.
 	 * @return A boolean value indicating if the searched Element is found.
 	 ************************************************************* 
-	 */
+	 *//*
 	public boolean isElementPresentVerification(WebElement elemToVerify, String strObjName){
 
 		try{
@@ -291,13 +291,13 @@ public class CommonFunctions {
 			//report.updateTestLog("Error in identifying element (" + strObjName + ")", nsee.toString(), Status.FAIL);
 			return false;
 		} catch(Exception e){
-			/*//report.updateTestLog("IS ELEMENT PRESENT VERIFICATION", "Error in identifying object (" + strObjName
-					+ ") -" + e.toString(), Status.FAIL);*/
+			//report.updateTestLog("IS ELEMENT PRESENT VERIFICATION", "Error in identifying object (" + strObjName
+					+ ") -" + e.toString(), Status.FAIL);
 			return false;
 		}
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify if an element is present in the application, not using
 	 * OR.
@@ -311,7 +311,7 @@ public class CommonFunctions {
 	 *            XPATH or CSS.
 	 * @return A boolean value indicating if the searched Element is found.
 	 ************************************************************* 
-	 */
+	 *//*
 	public boolean isElementPresentVerification(WebElement elemToVerify, String strObjName,Boolean writereport){
 
 		boolean result;
@@ -328,7 +328,7 @@ public class CommonFunctions {
 		}
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify and update test log if an element exists on the Webpage
 	 * 
@@ -343,7 +343,7 @@ public class CommonFunctions {
 	 * @return false 
 	 *   	   If the element does not exist on page
 	 ************************************************************* 
-	 */
+	 *//*
 	public boolean verifyIfElementIsPresent(String strFindElementType, String strObjectProperty, String objName){
 		WebElement elemToFind;
 		try{	    	
@@ -384,12 +384,12 @@ public class CommonFunctions {
 		}
 	}
 
-	/*************************************************************
+	*//*************************************************************
 	 *Function to Verify Element is Not Present For Negative Scenario
 	 * 
 	 * @param elemToVerify
 	 * @param strObjName
-	 **************************************************************/
+	 **************************************************************//*
 
 	public boolean verifyIsElementNotPresent(String strObjectProperty, String strFindElementType, String strObjName){
 		boolean result = false;
@@ -428,13 +428,13 @@ public class CommonFunctions {
 		}
 
 
-	/*******************************************************************
+	*//*******************************************************************
 	 * Function to Verify Element is Not Present within a parent element -
 	 * Negative Scenario
 	 * 
 	 * @param elemToVerify
 	 * @param strObjName
-	 *******************************************************************/
+	 *******************************************************************//*
 	public boolean verifyIsElementNotPresent(WebElement elmt, String strParentElementName, String strObjectProperty,
 			String strFindElementType, String strObjName){
 
@@ -473,7 +473,7 @@ public class CommonFunctions {
 
 
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to Retrieve data from dataTable.
 	 * 
@@ -495,7 +495,7 @@ public class CommonFunctions {
 	 * @author 387478
 	 * 			
 	 ************************************************************* 
-	 */
+	 *//*
 	public String getData(String sheetName, String columnName, String objName, boolean displayError)
 	{
 		String retrievedData ="";
@@ -533,7 +533,7 @@ public class CommonFunctions {
 	}
 
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to Retrieve data from dataTable based on input environment.
 	 * This function will append QA_,Test_ or Prod_ in columnName based on the environment
@@ -559,7 +559,7 @@ public class CommonFunctions {
 	 * @author 387478
 	 * 			
 	 ************************************************************* 
-	 */
+	 *//*
 	public String getData(String environment, String sheetName, String columnName, String objName, boolean displayError){
 		String retrievedData ="";
 		String defaultValue ="BLANK";
@@ -588,7 +588,7 @@ public class CommonFunctions {
 		return retrievedData;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to Retrieve data from dataTable based on input environment.
 	 * This function will append QA_,Test_ or Prod_ in columnName based on the environment
@@ -614,7 +614,7 @@ public class CommonFunctions {
 	 * @author 387478
 	 * 			
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public String getData(Boolean useenvironment, String sheetName, String columnName, String objName, boolean displayError){
 		String retrievedData ="";
@@ -647,7 +647,7 @@ public class CommonFunctions {
 
 
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to Retrieve data from dataTable.
 	 * 
@@ -667,8 +667,8 @@ public class CommonFunctions {
 	 * @return String
 	 * 			
 	 ************************************************************* 
-	 */
-	/*public String validateData(String sheetName, String columnName, String objName)
+	 *//*
+	public String validateData(String sheetName, String columnName, String objName)
 	{
 		String retrievedData = null;
 		try{
@@ -685,8 +685,8 @@ public class CommonFunctions {
 		}
 		return retrievedData;
 	}
-*/
-	/**
+
+	*//**
 	 ************************************************************* 
 	 * Function to Retrieve data from dataTable.
 	 * 
@@ -703,9 +703,9 @@ public class CommonFunctions {
 	 * @return String
 	 * 			
 	 ************************************************************* 
-	 */
+	 *//*
 
-/*	public String validateData(String sheetName, String columnName)
+	public String validateData(String sheetName, String columnName)
 	{
 		String retrievedData = null;
 
@@ -722,8 +722,8 @@ public class CommonFunctions {
 			throw new FrameworkException("Retrieve data from "+columnName,"" + " is blank in "+ columnName +" column in "+ sheetName +" sheet.");
 		}
 		return retrievedData;
-	}*/
-	/**
+	}
+	*//**
 	 ************************************************************* 
 	 * Function to clear existing text in a field and enter required data.
 	 * 
@@ -735,7 +735,7 @@ public class CommonFunctions {
 	 *            entered in the text field.
 	 * @return void
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public boolean clearAndEnterText(WebElement elemToEnter, String strValueToEnter, String strObjName)
 	{
@@ -760,7 +760,7 @@ public class CommonFunctions {
 		}return result;
 		}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to clear existing text in a field and enter required data.
 	 * 
@@ -772,7 +772,7 @@ public class CommonFunctions {
 	 *            entered in the text field.
 	 * @return void
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public boolean clearAndEnterText(PageObjects pageObject, String strValueToEnter)
 	{
@@ -801,7 +801,7 @@ public class CommonFunctions {
 			return true;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to click a given element
 	 * 
@@ -812,7 +812,7 @@ public class CommonFunctions {
 	 *            for //reporting purposes.
 	 * @return A boolean value indicating if the searched Element is found.
 	 ************************************************************* 
-	 */
+	 *//*
 	public boolean updateAnyElement(WebElement elemToEnter, String strValueToEnter, String strObjName){
 
 		if(!strValueToEnter.trim().equalsIgnoreCase("IGNORE")){
@@ -851,7 +851,7 @@ public class CommonFunctions {
 			return true;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to click a link which opens in same tab and verify
 	 * if correct URL is opened. User is navigated back to the original URL
@@ -870,7 +870,7 @@ public class CommonFunctions {
 	 * @return A boolean value indicating if the user is navigated to correct URL
 	 * @throws InterruptedException 
 	 ************************************************************* 
-	 */
+	 *//*
 	public boolean clickAndVerifyUrl(WebElement element, String expectedUrl, String strObjName) throws InterruptedException{
 		if(!clickIfElementPresent(element, strObjName)){
 			return false;
@@ -886,7 +886,7 @@ public class CommonFunctions {
 	}
 
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to Check Element is enabled
 	 *      * 
@@ -900,7 +900,7 @@ public class CommonFunctions {
 	 *            for //reporting purposes.
 	 * @return None
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public void verifyElementIsEnabledAndNavigateBack(WebElement elementToSelect, String strValueToSelect, String strObjName)throws Exception
 	{
@@ -922,7 +922,7 @@ public class CommonFunctions {
 
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to Check Element is enabled
 	 *      * 
@@ -936,7 +936,7 @@ public class CommonFunctions {
 	 *            for //reporting purposes.
 	 * @return None
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public boolean verifyElementIsEnabled(WebElement elementToSelect, String strValueToSelect, String strObjName)throws Exception
 	{
@@ -955,14 +955,14 @@ public class CommonFunctions {
 
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to Check Element is enabled
 	 *   
 	 * @parameter pageObject
 	 * @return None
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public boolean verifyElementIsEnabled(PageObjects pageObject)throws Exception
 	{
@@ -986,7 +986,7 @@ public class CommonFunctions {
 
 
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to Check Element is not enabled
 	 * 	 * 
@@ -1000,7 +1000,7 @@ public class CommonFunctions {
 	 *            for //reporting purposes.
 	 * @return None
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public boolean verifyElementIsNotEnabled(WebElement elementToSelect, String strValueToSelect, String strObjName)throws Exception
 	{
@@ -1018,14 +1018,14 @@ public class CommonFunctions {
 
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to Check Element is not enabled
 	 * 	@parameter pageObject
 
 	 * @return None
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public boolean verifyElementIsNotEnabled(PageObjects pageObject)throws Exception
 	{
@@ -1047,7 +1047,7 @@ public class CommonFunctions {
 	}
 
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Method to check/uncheck a checkbox based on the given option
 	 * 
@@ -1061,7 +1061,7 @@ public class CommonFunctions {
 	 *            for //reporting purposes.
 	 * @return None
 	 ************************************************************* 
-	 */
+	 *//*
 	public void clickIfElementPresent(WebElement elementToSelect, String strValueToSelect, String strObjName){
 
 		String strStateToreport = " ";
@@ -1086,7 +1086,7 @@ public class CommonFunctions {
 		}
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify same text is present in both the input strings
 	 * 
@@ -1099,7 +1099,7 @@ public class CommonFunctions {
 	 * @author 387478    *   
 	 *
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public boolean compareText(String expectedString, String actualString, String objName)
 	{
@@ -1117,7 +1117,7 @@ public class CommonFunctions {
 		return false;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to convert string to integer
 	 * 
@@ -1130,7 +1130,7 @@ public class CommonFunctions {
 	 * @author 387478
 	 *
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public long convertStringtoInteger(String stringtoConvert)
 	{
@@ -1145,7 +1145,7 @@ public class CommonFunctions {
 	}
 
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to convert string to double
 	 * 
@@ -1158,7 +1158,7 @@ public class CommonFunctions {
 	 * @author 387478
 	 *
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public double convertStringtoDouble(String stringtoConvert)
 	{
@@ -1179,7 +1179,7 @@ public class CommonFunctions {
 	}
 
 
-	/******************************************************
+	*//******************************************************
 	 * Function to remove a character from Input String
 	 * 
 	 * @param strring
@@ -1188,7 +1188,7 @@ public class CommonFunctions {
 	 * 
 	 * @author 387478
 	 * ******************************************************
-	 */
+	 *//*
 
 	public String RemoveCharacter(String str, char charToRemove){
 
@@ -1205,13 +1205,13 @@ public class CommonFunctions {
 		return st;
 	}
 
-	/************************************************************
+	*//************************************************************
 	 * function to remove special characters in a string
 	 * 
 	 * @param strring
 	 *            to remove the characters
 	 * @return string
-	 ***********************************************************/
+	 ***********************************************************//*
 
 	public String RemoveSpecialcharacters(String str){
 
@@ -1227,13 +1227,13 @@ public class CommonFunctions {
 
 		return st;
 	}
-	/************************************************************
+	*//************************************************************
 	 * function to remove Question Mark in a string
 	 * 
 	 * @param string
 	 *            to remove the Question Mark
 	 * @return string
-	 ***********************************************************/
+	 ***********************************************************//*
 
 	public String RemoveQuestionMark(String str){
 
@@ -1249,7 +1249,7 @@ public class CommonFunctions {
 
 		return st;
 	}
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to compare (equals or contains) two strings after removing
 	 * special characters from them
@@ -1260,7 +1260,7 @@ public class CommonFunctions {
 	 * 
 	 * @return Boolean
 	 ************************************************************* 
-	 */
+	 *//*
 	public Boolean compareRemovingSpecialCharacters(String str1, String strContainsOrEquals, String str2){
 
 		str1 = RemoveSpecialcharacters(str1.trim().toLowerCase());
@@ -1278,14 +1278,14 @@ public class CommonFunctions {
 		}
 	}
 
-	/***************************************************
+	*//***************************************************
 	 * Function to remove special characters in a Amount
 	 * It keeps '.' and '-' sign
 	 * 
 	 * @param strring
 	 *            to remove the characters
 	 * @return string
-	 ********************************************************/
+	 ********************************************************//*
 
 	public String RemoveSpecialcharactersFromAmount(String str){
 
@@ -1302,7 +1302,7 @@ public class CommonFunctions {
 		return st;
 	}
 
-	/**
+	*//**
 	 * ***************************************************
 	 * Function to format a amount
 	 * Adds Grouping identifier ','
@@ -1314,7 +1314,7 @@ public class CommonFunctions {
 	 * 
 	 * @author 313057
 	 * ***************************************************
-	 */
+	 *//*
 	public String formatAmount(String amount){
 
 		NumberFormat myFormat = NumberFormat.getInstance();
@@ -1338,7 +1338,7 @@ public class CommonFunctions {
 	}
 
 
-	/**************************************************************
+	*//**************************************************************
 	 * Function to format a amount with dollar
 	 * Adds Grouping identifier ','
 	 * Returns a string having two characters after a dot
@@ -1348,7 +1348,7 @@ public class CommonFunctions {
 	 * @return string
 	 * 
 	 * @author 387478
-	 ****************************************************************/
+	 ****************************************************************//*
 
 
 	public String formatAmountWithDollar(String amount){
@@ -1392,7 +1392,7 @@ public class CommonFunctions {
 
 
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to find an element by property NOT defined in the OR file.
 	 * 
@@ -1405,7 +1405,7 @@ public class CommonFunctions {
 	 *            XPATH or CSS.
 	 * @return A {@link WebElement} object.
 	 ************************************************************* 
-	 */
+	 *//*
 	public WebElement getElementByProperty(String strObjectProperty, String strFindElementType,boolean displayError){
 
 		try{
@@ -1441,7 +1441,7 @@ public class CommonFunctions {
 		}
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify same text is present in both the input strings
 	 * 
@@ -1454,7 +1454,7 @@ public class CommonFunctions {
 	 * @author 387478    *   
 	 *
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public boolean verifyText(String expectedString, String actualString, String objName)
 	{
@@ -1467,7 +1467,7 @@ public class CommonFunctions {
 		}           
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify whether a given Element is present within the page and
 	 * click
@@ -1484,7 +1484,7 @@ public class CommonFunctions {
 	 *            for //reporting purposes.
 	 * @return A boolean value indicating if the searched Element is found.
 	 ************************************************************* 
-	 */
+	 *//*
 	public boolean clickIfElementPresent(WebElement element, String strObjName){
 
 		try{
@@ -1502,13 +1502,13 @@ public class CommonFunctions {
 			return false;
 		}
 	}
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify whether a given Element is present within the page and
 	 * click
 	 * 
 	 * @parameter pageObject
-	 ************************************************/
+	 ************************************************//*
 
 	public boolean clickIfElementPresent(PageObjects pageObject){
 
@@ -1525,13 +1525,13 @@ public class CommonFunctions {
 			return false;
 		}
 	}
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify whether a given Element is present within the page and
 	 * click
 	 * 
 	 * @parameter pageObject
-	 ************************************************/
+	 ************************************************//*
 
 	public void clickOnElementjavaScript(PageObjects pageObject)
 	{
@@ -1549,13 +1549,13 @@ public class CommonFunctions {
 
 		}
 	}
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to scroll to Element
 	 *
 	 * 
 	 * @parameter pageObject
-	 ************************************************/
+	 ************************************************//*
 
 
 	public void scrollToElementjavaScript(PageObjects pageObject)
@@ -1581,13 +1581,13 @@ public class CommonFunctions {
 
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to click on element and take screenshot
 	 * 
 	 * 
 	 * @parameter pageObject
-	 ************************************************/
+	 ************************************************//*
 
 	public boolean clickIfElementPresentWithoutScreenshots(PageObjects pageObject){
 
@@ -1610,13 +1610,13 @@ public class CommonFunctions {
 		}
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to click on element
 	 * 
 	 * @param element
 	 * @param strObjName
-	 ************************************************/
+	 ************************************************//*
 	public boolean clickIfElementPresents(WebElement element, String strObjName){
 
 		try{
@@ -1634,13 +1634,13 @@ public class CommonFunctions {
 		}
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to click on element if present 
 	 * 
 	 * @param element
 	 * @param strObjName
-	 ************************************************/
+	 ************************************************//*
 
 	public boolean clickIfElementPresentNoWait(WebElement element, String strObjName){
 
@@ -1661,7 +1661,7 @@ public class CommonFunctions {
 
 
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to return attribute value
 	 * 
@@ -1672,7 +1672,7 @@ public class CommonFunctions {
 	 * 
 	 * @return String value of attribute Name.
 	 ************************************************************* 
-	 */
+	 *//*
 	public String getAttributeValue(WebElement element, String attributeName){
 
 		try
@@ -1686,14 +1686,14 @@ public class CommonFunctions {
 
 
 
-	/*************************************************************
+	*//*************************************************************
 	 * Method to execute PDB sql queries
 	 * 
 	 * @param strQuery
 	 *            - SQL query to be executed
 	 * @return record set for executed query
 	 * @throws SQLException
-	 ************************************************************/
+	 ************************************************************//*
 	public ResultSet exeuctePDBQuery(String strQuery) throws SQLException{
 
 		Connection connection = null;
@@ -1725,14 +1725,14 @@ public class CommonFunctions {
 		}
 	}
 
-	/*******************************************************
+	*//*******************************************************
 	 * Method to execute WCBE query
 	 * 
 	 * @param strQuery
 	 *            - Query to be triggered
 	 * @return - record set for triggered WCBE SQL query
 	 * @throws SQLException
-	 ******************************************************/
+	 ******************************************************//*
 	public ResultSet exeucteWCBEQuery(String strQuery) throws SQLException{
 
 		Connection connection = null;
@@ -1771,53 +1771,53 @@ public class CommonFunctions {
 		}
 	}
 
-	/***************************************************************************
+	*//***************************************************************************
 	 * @description Method to result customer name with time stamp
 	 * @param strCustomUserName
 	 *            - Customer name
 	 * @return String
 	 * @modified_date Dec 4, 2013
-	 *****************************************************************************/
+	 *****************************************************************************//*
 	public String generateCustomUserName(String strCustomUserName){
 
 		String strTimeStamp = getCurrentTimeStamp();
 		return strCustomUserName + strTimeStamp;
 	}
 
-	/************************************************
+	*//************************************************
 	 * @description Method to generate new user name
 	 * @return String
 	 * @modified_date Dec 4, 2013
-	 *******************************************************/
+	 *******************************************************//*
 	public String generateNewUserName(){
 
 		String strTimeStamp = getCurrentTimeStamp();
 		return "TestUser" + strTimeStamp;
 	}
 
-	/**
+	*//**
 	 * @description Method to generate new email address
 	 * @return String
 	 * @modified_date Dec 4, 2013
-	 */
+	 *//*
 	public String generateUpdateEmailAddr(){
 
 		String strTimeStamp = getCurrentTimeStamp();
 		return "newuser" + strTimeStamp + "@gmail.com";
 	}
 
-	/**
+	*//**
 	 * @description Method to generate new user name
 	 * @return String
 	 * @modified_date Dec 4, 2013
-	 */
+	 *//*
 	public String generateUpdateUserName(){
 
 		String strTimeStamp = getCurrentTimeStamp();
 		return "UpdateUser" + strTimeStamp;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to select a particular Value from any List box.
 	 * 
@@ -1828,7 +1828,7 @@ public class CommonFunctions {
 	 *            The {@link String} object that has the item to be selected.
 	 * @return void
 	 ************************************************************* 
-	 */
+	 *//*
 	public void genericListBoxOptionSelector(WebElement ListBoxObject, String strSelectOption) throws Exception{
 
 		try{
@@ -1839,11 +1839,11 @@ public class CommonFunctions {
 		}
 	}
 
-	/**
+	*//**
 	 * @description Method to get a time-stamp in MMMdd_mm_ss format
 	 * @return String
 	 * @modified_date Dec 4, 2013
-	 */
+	 *//*
 	public String getCurrentTimeStamp(){
 
 		String strTimestamp;
@@ -1855,11 +1855,11 @@ public class CommonFunctions {
 
 
 
-	/**
+	*//**
 	 * @description Method to get eastern time
 	 * @return String
 	 * @modified_date Dec 4, 2013
-	 */
+	 *//*
 	public String getEasternTimeStamp(){
 
 		Calendar cal = Calendar.getInstance(TimeZone.getTimeZone("US/Eastern"));
@@ -1870,7 +1870,7 @@ public class CommonFunctions {
 		return strEasternTimestamp;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to get element attribute
 	 * 
@@ -1882,7 +1882,7 @@ public class CommonFunctions {
 	 *            be fetched
 	 * @return
 	 ************************************************************* 
-	 */
+	 *//*
 	public String getElementAttribute(String strObjectProperty, String strFindElementType, String attributeToGet,
 			String strObjName){
 
@@ -1897,7 +1897,7 @@ public class CommonFunctions {
 		return attributVal;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to find an element by property NOT defined in the OR file.
 	 * 
@@ -1910,7 +1910,7 @@ public class CommonFunctions {
 	 *            XPATH or CSS.
 	 * @return A {@link WebElement} object.
 	 ************************************************************* 
-	 */
+	 *//*
 	public WebElement getElementByProperty(String strObjectProperty, String strFindElementType, String objName){
 
 		try{
@@ -1938,14 +1938,14 @@ public class CommonFunctions {
 		}
 
 		catch(Exception e){
-			/*//report.updateTestLog("Verify if " + strFindElementType + " - " + strObjectProperty + " is present",
+			//report.updateTestLog("Verify if " + strFindElementType + " - " + strObjectProperty + " is present",
 					"Element with property " + strFindElementType + " - " + strObjectProperty + " not found",
-					Status.FAIL);*/
+					Status.FAIL);
 			return null;
 		}
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to find an element by property NOT defined in the OR file.
 	 * 
@@ -1958,7 +1958,7 @@ public class CommonFunctions {
 	 *            XPATH or CSS.
 	 * @return A {@link WebElement} object.
 	 ************************************************************* 
-	 */
+	 *//*
 	public List<WebElement> getElementsByProperty(String strObjectProperty, String strFindElementType){
 
 		try{
@@ -1990,7 +1990,7 @@ public class CommonFunctions {
 		}
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to find an element by property NOT defined in the OR file.
 	 * 
@@ -2005,7 +2005,7 @@ public class CommonFunctions {
 	 *            XPATH or CSS.
 	 * @return A {@link WebElement} object.
 	 ************************************************************* 
-	 */
+	 *//*
 	public List<WebElement> getElementsByProperty(WebElement webElement, String strObjectProperty,
 			String strFindElementType){
 
@@ -2038,7 +2038,7 @@ public class CommonFunctions {
 		}
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to find an element by property NOT defined in the OR file.
 	 * 
@@ -2053,7 +2053,7 @@ public class CommonFunctions {
 	 *            XPATH or CSS.
 	 * @return A {WebElement} object.
 	 ************************************************************* 
-	 */
+	 *//*
 	public WebElement getElementInsideElement(WebElement webElement, String strObjectProperty, String strFindElementType){
 
 		try{
@@ -2085,7 +2085,7 @@ public class CommonFunctions {
 		}
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to find an element by property NOT defined in the OR file.
 	 * 
@@ -2098,7 +2098,7 @@ public class CommonFunctions {
 	 *            XPATH or CSS.
 	 * @return A {@link WebElement} object.
 	 ************************************************************* 
-	 */
+	 *//*
 	public List<WebElement> getElementsInsideElement(WebElement elemUsed, String strObjectProperty,
 			String strObjectPropertyType){
 
@@ -2133,13 +2133,13 @@ public class CommonFunctions {
 
 
 
-	/**
+	*//**
 	 * Method To Get The Window Size
 	 * 
 	 * @author Manoj Venkat
 	 * @param Dimension
 	 * @return strSize {@link dimSize} Size Of The Window
-	 */
+	 *//*
 	public Dimension getWindowSize(){
 
 		Dimension dimSize = driver.manage().window().getSize();
@@ -2147,7 +2147,7 @@ public class CommonFunctions {
 	}
 
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Method to verify an element which is a image ,href for which we get the
 	 * String value using attribute.
@@ -2155,7 +2155,7 @@ public class CommonFunctions {
 	 * @return A boolean value indicating if the searched Element is found.
 	 *         author Lavannya
 	 ************************************************************* 
-	 */
+	 *//*
 	public WebElement isElementPresentContainsAttributeText(String strObjectProperty, String strFindElementType,
 			String StrObjName, String textToVerify, String attribute) throws IOException{
 
@@ -2175,7 +2175,7 @@ public class CommonFunctions {
 		}
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Method to verify an element which is a image ,href for which we get the
 	 * String value using text.
@@ -2183,7 +2183,7 @@ public class CommonFunctions {
 	 * @return A boolean value indicating if the searched Element is found.
 	 *         author Lavannya
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public WebElement isElementPresentContainsText(String strObjectProperty, String strFindElementType,
 			String StrObjName, String textToVerify) throws IOException{
@@ -2203,7 +2203,7 @@ public class CommonFunctions {
 		}
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify if an element is present in the application, not using
 	 * OR.
@@ -2217,7 +2217,7 @@ public class CommonFunctions {
 	 *            XPATH or CSS.
 	 * @return A boolean value indicating if the searched Element is found.
 	 ************************************************************* 
-	 */
+	 *//*
 	public boolean isElementPresentVerification(String strObjectProperty, String strFindElementType, String strObjName)
 			throws IOException{
 
@@ -2237,14 +2237,14 @@ public class CommonFunctions {
 	}
 
 
-	/**
+	*//**
 	 * @description Method to verify if the text in the element has Font-Weight
 	 *              Bold returns
 	 * @param elmt
 	 *            - element to be verified
 	 * @return boolean - true on pass and false on failure
 	 * @modified_date Dec 9, 2013
-	 */
+	 *//*
 	public boolean isFontWeightBold(WebElement elmt){
 
 
@@ -2271,12 +2271,12 @@ public class CommonFunctions {
 	}
 
 
-	/**************************************************
+	*//**************************************************
 	 * @description Method to perform mouse hover on given element
 	 * @param element
 	 *            - element on which mouse hover action needs to be performed
 	 * @modified_date Dec 9, 2013
-	 ************************************************************/
+	 ************************************************************//*
 
 	public void mouseOver(WebElement element){
 
@@ -2293,12 +2293,12 @@ public class CommonFunctions {
 
 	}
 
-	/**************************************************
+	*//**************************************************
 	 * @description Method to perform mouse hover on given element
 	 * @param pageObject
 	 *            - element on which mouse hover action needs to be performed
 	 * @modified_date Dec 9, 2013
-	 ************************************************************/
+	 ************************************************************//*
 	public void mouseOver(PageObjects pageObject){
 
 		WebElement element = getPageElement(pageObject);
@@ -2315,13 +2315,13 @@ public class CommonFunctions {
 
 	}
 
-	/**
+	*//**
 	 * @description Method to perform mouse hover action on internet explorer
 	 * @param element
 	 *            - Element on which mouse hover action needs to be performed
 	 * @return Nothing
 	 * @modified_date Dec 9, 2013
-	 */
+	 *//*
 	public void mouseOverIE(WebElement element){
 
 		String code = " function sleep(milliseconds) {"
@@ -2339,35 +2339,35 @@ public class CommonFunctions {
 
 
 
-	/**
+	*//**
 	 * @description Method to perform back browser action
 	 * @return Nothing
 	 * @modified_date Dec 9, 2013
-	 */
+	 *//*
 	public void navigateBackFromCurrentPage(){
 
 		driver.navigate().back();
 
 	}
 
-	/**
+	*//**
 	 * @description Method to navigate to specified URL
 	 * @param strURL
 	 *            - navigation URL
 	 * @return Nothing
 	 * @modified_date Dec 9, 2013
-	 */
+	 *//*
 	public void navigateToUrl(String strURL){
 
 		driver.get(strURL);
 		driver.manage().window().maximize();
 	}
 
-	/**
+	*//**
 	 * @description Method to open a new tab in browser with specified URL
 	 * @param url
 	 * @modified_date Dec 9, 2013
-	 */
+	 *//*
 	public void openTab(String url){
 
 		WebElement a = (WebElement) ((JavascriptExecutor) driver)
@@ -2377,7 +2377,7 @@ public class CommonFunctions {
 		a.click();
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to get the current Page Load state
 	 * 
@@ -2385,17 +2385,17 @@ public class CommonFunctions {
 	 * @author Ganesh
 	 * @return Boolean
 	 ************************************************************* 
-	 */
+	 *//*
 	public boolean pageLoadstate(){
 		return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
 	}
 
 
-	/************************************
+	*//************************************
 	 * @description Method to refresh page
 	 * @return Nothing
 	 * @modified_date Dec 5, 2014
-	 *******************************************/
+	 *******************************************//*
 	public void pageRefresh()
 	{
 		driver.navigate().refresh();
@@ -2403,7 +2403,7 @@ public class CommonFunctions {
 	}
 
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to read properties file
 	 * 
@@ -2414,7 +2414,7 @@ public class CommonFunctions {
 	 *            read.
 	 * @return The {@link String} object that contains the property value.
 	 ************************************************************* 
-	 */
+	 *//*
 	public String readPropertiesFile(String propertiesFileName, String propertyName){
 
 		Locale locale = new Locale("en", "US");
@@ -2424,7 +2424,7 @@ public class CommonFunctions {
 
 	}
 
-	/*************************************************************************
+	*//*************************************************************************
 	 * This method will replace the given query if it has fields <VALUE> with
 	 * the given data
 	 * 
@@ -2437,7 +2437,7 @@ public class CommonFunctions {
 	 *            Data to be replaced in place of <VALUE> specified in the given
 	 *            query PRECEEDED by '&'. Ex: &14336&m5g&212
 	 * @return
-	 **********************************************************************************/
+	 **********************************************************************************//*
 	public String replaceQueryWithValue(String strDTValue, String strScenario){
 		if(strDTValue.toUpperCase().contains("AS400") || strDTValue.toUpperCase().contains("PDB")
 				|| strDTValue.toUpperCase().contains("WCBE")){
@@ -2451,7 +2451,7 @@ public class CommonFunctions {
 			return strDTValue;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Method to select an option directly from combo box/list box
 	 * 
@@ -2465,7 +2465,7 @@ public class CommonFunctions {
 	 *            for //reporting purposes.
 	 * @return A boolean value indicating if selecting an option is done.
 	 ************************************************************* 
-	 */
+	 *//*
 	public void selectAnyElement(String strObjProperty, String strObjPropertyType, String strValueToSelect,
 			String strObjName){
 
@@ -2481,7 +2481,7 @@ public class CommonFunctions {
 		}
 	}
 
-	/***
+	*//***
 	 ************************************************************* 
 	 * Method to select an option directly from combo box/list box
 	 * 
@@ -2495,7 +2495,7 @@ public class CommonFunctions {
 	 *            for //reporting purposes.
 	 * @return A boolean value indicating if selecting an option is done.
 	 ************************************************************* 
-	 */
+	 *//*
 	public void selectAnyElement(WebElement elementToSelect, String strValueToSelect, String strObjName) {
 
 		if(!(strValueToSelect.trim().equalsIgnoreCase("IGNORE"))){
@@ -2515,7 +2515,7 @@ public class CommonFunctions {
 		}
 	}
 
-	/***
+	*//***
 	 ************************************************************* 
 	 * Method to select an option directly from combo box/list box
 	 * 
@@ -2528,7 +2528,7 @@ public class CommonFunctions {
 	 *            for //reporting purposes.
 	 * @return A boolean value indicating if selecting an option is done.
 	 ************************************************************* 
-	 */
+	 *//*
 	public void selectAnyElement(WebElement elementToSelect, int indexToSelect, String strObjName){
 
 		if(indexToSelect > -1){
@@ -2549,7 +2549,7 @@ public class CommonFunctions {
 		}
 	}
 
-	/**
+	*//**
 	 * Method To Get the window handle result
 	 * 
 	 * @param driver
@@ -2557,7 +2557,7 @@ public class CommonFunctions {
 	 * @param strWindowTitle
 	 *            tab title to be switched to
 	 * @return boolean
-	 */
+	 *//*
 	public boolean switchToDifferentWindow(WebDriver driver, String strWindowTitle){
 
 		WebDriver popup = null;
@@ -2576,12 +2576,12 @@ public class CommonFunctions {
 		return false;
 	}
 
-	/**
+	*//**
 	 * @description Method to switch to next window
 	 * @throws NoSuchWindowException
 	 * @return nothing
 	 * @modified_date Dec 12, 2013
-	 */
+	 *//*
 	public void switchWindow() throws NoSuchWindowException{
 
 		Set<String> handles = driver.getWindowHandles();
@@ -2591,11 +2591,11 @@ public class CommonFunctions {
 		driver.switchTo().window(newTab);
 	}
 
-	/**
+	*//**
 	 * @description Method to switch to next window
 	 * @throws NoSuchWindowException
 	 * @return nothing
-	 * @modified_date Dec 12, 2013*/
+	 * @modified_date Dec 12, 2013*//*
 
 	public void switchwindowHandle()
 	{
@@ -2614,7 +2614,7 @@ public class CommonFunctions {
 		}
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify whether a given Element is present within the page and
 	 * update the value
@@ -2631,7 +2631,7 @@ public class CommonFunctions {
 	 *            for //reporting purposes.
 	 * @return A boolean value indicating if the searched Element is found.
 	 ************************************************************* 
-	 */
+	 *//*
 	public boolean updateAnyElement(String strObjProperty, String strObjPropertyType, String strValueToUpdate,
 			String strObjName){
 
@@ -2653,7 +2653,7 @@ public class CommonFunctions {
 			return true;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to enter value in given element
 	 * 
@@ -2664,7 +2664,7 @@ public class CommonFunctions {
 	 *            for //reporting purposes.
 	 * @return A boolean value indicating if the searched Element is found.
 	 ************************************************************* 
-	 */
+	 *//*
 	public boolean enterValueInElement(WebElement elemToEnter, String strValueToEnter, String strObjName){
 
 		if(!strValueToEnter.trim().equalsIgnoreCase("IGNORE")){
@@ -2698,7 +2698,7 @@ public class CommonFunctions {
 			return true;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to update Element using javascript
 	 * 
@@ -2708,7 +2708,7 @@ public class CommonFunctions {
 	 *            The {@link strObjName} is used for identifying the object used
 	 *            for //reporting purposes.
 	 * @return A boolean value indicating if the searched Element is found.
-	 *************************************************************/
+	 *************************************************************//*
 	public void updateElementUsingJavaScript(WebElement elmt, String strTextToUpdate, String strElemName){
 
 		try{
@@ -2724,7 +2724,7 @@ public class CommonFunctions {
 
 
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Method to verify an element state based on given input conditions and
 	 * //report
@@ -2745,7 +2745,7 @@ public class CommonFunctions {
 	 *            for //reporting purposes.
 	 * @return A boolean value indicating if the searched Element is found.
 	 ************************************************************* 
-	 */
+	 *//*
 	public boolean verifyAndreportElementState(WebElement elemToVerify, String strElemStateToVerify,
 	String strExpValue, String strObjName){
 
@@ -2906,12 +2906,12 @@ public class CommonFunctions {
 		return false;
 	}
 
-	/**
+	*//**
 	 * Function name: verifyElementAttribute Description: To verify an attribute
 	 * of an object Parameters: strPropertyValue - Object property value,
 	 * strPropertyBy - Property type strAttributeName - attribute type,
 	 * strAttributeValue - expected attribute value Developed by: VaibhavS
-	 * */
+	 * *//*
 	public void verifyElementAttribute(String strPropertyValue, String strPropertyBy, String strObjName,
 			String strAttributeName, String strAttributeValue){
 
@@ -2923,7 +2923,7 @@ public class CommonFunctions {
 		}
 	}
 
-	/**
+	*//**
 	 * Method to verify the positioning of two web elements. Always to compare
 	 * the second element with first element keeping the first element as
 	 * static.
@@ -2938,7 +2938,7 @@ public class CommonFunctions {
 	 * @return boolean returns true if the element is present in required
 	 *         condition
 	 * 
-	 */
+	 *//*
 	public boolean verifyElementPositions(WebElement elemStatic, String elemStaticName, String strPositionToVerify,
 			WebElement elemToVerify, String elemToVerifyName){
 
@@ -3004,7 +3004,7 @@ public class CommonFunctions {
 	}
 
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify source of image
 	 * 
@@ -3022,7 +3022,7 @@ public class CommonFunctions {
 	 * 			
 	 * @return void
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public void verifyImageSource(WebElement element,String expectedSource, String objName){
 		String actualSource="";
@@ -3034,7 +3034,7 @@ public class CommonFunctions {
 			
 		}
 	}
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify source of image
 	 * 
@@ -3052,7 +3052,7 @@ public class CommonFunctions {
 	 * 			
 	 * @return void
 	 ************************************************************* 
-	 */
+	 *//*
 	public void verifyImageSource(PageObjects pageObject,String expectedSource){
 		WebElement element = getPageElement(pageObject); 
 		String StrObjName = pageObject.getObjectname();
@@ -3068,7 +3068,7 @@ public class CommonFunctions {
 		}
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify Same text present in an element
 	 * 
@@ -3081,7 +3081,7 @@ public class CommonFunctions {
 	 *            be verified
 	 * @return
 	 ************************************************************* 
-	 */
+	 *//*
 
 
 	public boolean verifyElementPresentEqualsText(WebElement element, String StrObjName, String textToVerify)	throws IOException{
@@ -3143,7 +3143,7 @@ public class CommonFunctions {
 		return false;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify Link without click
 	 * 
@@ -3156,7 +3156,7 @@ public class CommonFunctions {
 	 *            be verified
 	 * @return
 	 ************************************************************* 
-	 */
+	 *//*
 
 
 	public boolean verifyLinkWithoutClick(WebElement element, String StrObjName,String linkToVerify)  throws InterruptedException
@@ -3207,7 +3207,7 @@ public class CommonFunctions {
 		return false;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify text
 	 * 
@@ -3220,7 +3220,7 @@ public class CommonFunctions {
 	 *            be verified
 	 * @return
 	 ************************************************************* 
-	 */
+	 *//*
 
 
 	public boolean verifyElementPresentEqualsText(PageObjects pageObject,  String textToVerify)	throws IOException{
@@ -3252,7 +3252,7 @@ public class CommonFunctions {
 		}
 		return false;
 	}
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify Text without screenshot
 	 * 
@@ -3265,7 +3265,7 @@ public class CommonFunctions {
 	 *            be verified
 	 * @return
 	 ************************************************************* 
-	 */
+	 *//*
 
 
 
@@ -3298,7 +3298,7 @@ public class CommonFunctions {
 		return false;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify Attribute without screenshot
 	 * 
@@ -3311,7 +3311,7 @@ public class CommonFunctions {
 	 *            be verified
 	 * @return
 	 ************************************************************* 
-	 */
+	 *//*
 
 
 	public boolean verifyElementPresentEqualsAttributeWithoutScreenshots(PageObjects pageObject,  String textToVerify)	throws IOException{
@@ -3341,7 +3341,7 @@ public class CommonFunctions {
 		return false;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify whether a given Element is present within the page and
 	 * click
@@ -3358,16 +3358,16 @@ public class CommonFunctions {
 	 *            for //reporting purposes.
 	 * @return A boolean value indicating if the searched Element is found.
 	 ************************************************************* 
-	 */
+	 *//*
 	public boolean clickOnGlobalNavigationLink(WebElement element, String strObjName){
 
 		try{
 			if(isElementPresentVerification(element, strObjName))
 			{
-				/*
+				
 				element.click();
 				new Actions(driver).moveToElement(element).click().perform();
-				 */
+				 
 				Actions builder = new Actions(driver);
 				builder.moveToElement(element).click();
 				builder.perform();
@@ -3388,7 +3388,7 @@ public class CommonFunctions {
 	}
 
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify text is present in an element
 	 * 
@@ -3401,7 +3401,7 @@ public class CommonFunctions {
 	 *            be verified
 	 * @return
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public boolean verifyElementPresentContainsText(WebElement element, String StrObjName, String textToVerify)	throws IOException
 	{
@@ -3428,7 +3428,7 @@ public class CommonFunctions {
 		return false;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify element present contains Text
 	 * 
@@ -3441,7 +3441,7 @@ public class CommonFunctions {
 	 *            be verified
 	 * @return
 	 ************************************************************* 
-	 */
+	 *//*
 	public boolean verifyElementPresentContainsText(PageObjects pageObject, String textToVerify) throws IOException
 	{
 		String pageSource;
@@ -3485,7 +3485,7 @@ public class CommonFunctions {
 		return false;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify element Match text
 	 * 
@@ -3498,7 +3498,7 @@ public class CommonFunctions {
 	 *            be verified
 	 * @return
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public boolean verifyElementMatchText(PageObjects pageObject,  String textToVerify)throws IOException
 	{
@@ -3561,7 +3561,7 @@ public class CommonFunctions {
 	}
 
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify text present in an element
 	 * 
@@ -3575,7 +3575,7 @@ public class CommonFunctions {
 	 * @return
 	 * @throws InterruptedException 
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public boolean verifyLinkPageTitle(WebElement element, String StrObjName,String titleToVerify,String linkToVerify)	throws InterruptedException
 	{
@@ -3661,7 +3661,7 @@ public class CommonFunctions {
 		}
 		return false;
 	}
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify Link In new Tab
 	 * 
@@ -3674,7 +3674,7 @@ public class CommonFunctions {
 	 *            be verified
 	 * @return
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public void  verifyLinkInNewTabjavaScript(WebElement element, String StrObjName,String linkToVerify)
 	{
@@ -3713,7 +3713,7 @@ public class CommonFunctions {
 		navigateBack();
 
 	}
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to Close All other Windows
 	 * 
@@ -3726,7 +3726,7 @@ public class CommonFunctions {
 	 *            be verified
 	 * @return
 	 ************************************************************* 
-	 */
+	 *//*
 	public  boolean closeAllOtherWindows(String openWindowHandle) {
 		Set<String> allWindowHandles = driver.getWindowHandles();
 		for (String currentWindowHandle : allWindowHandles) {
@@ -3743,7 +3743,7 @@ public class CommonFunctions {
 			return false;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify Link and Switch In new Tab
 	 * 
@@ -3756,7 +3756,7 @@ public class CommonFunctions {
 	 *            be verified
 	 * @return
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public void  verifyLinkAndSwitchInNewTabjavaScript(WebElement element, String StrObjName,String linkToVerify) throws InterruptedException
 	{
@@ -3807,7 +3807,7 @@ public class CommonFunctions {
 
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify text present in an element
 	 * 
@@ -3821,7 +3821,7 @@ public class CommonFunctions {
 	 * @return
 	 * @throws InterruptedException 
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public boolean verifyLinkInWebPage(WebElement element, String StrObjName,String linkToVerify)throws InterruptedException{
 
@@ -3923,7 +3923,7 @@ public class CommonFunctions {
 	}
 
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify text present in an element
 	 * 
@@ -3942,7 +3942,7 @@ public class CommonFunctions {
 	 * @param linkToVerify
 	 * @return
 	 * @throws InterruptedException
-	 ****************************************/
+	 ****************************************//*
 
 
 	public boolean verifyLinkInWebPageWithNoSpecialCharacter(WebElement element, String StrObjName,String linkToVerify)throws InterruptedException{
@@ -4041,20 +4041,20 @@ public class CommonFunctions {
 		return false;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to navigate back
 	 * 
 	 *
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public void navigateBack()
 	{
 		driver.navigate().back();
 		waitForPageToBeReady();
 	}
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify text present in an element
 	 * 
@@ -4069,7 +4069,7 @@ public class CommonFunctions {
 	 * @return
 	 * @throws InterruptedException 
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public boolean verifyLinkInPopUpPageTitle(WebElement element, String StrObjName,String linkToVerify,String titleToVerify)	throws InterruptedException{
 
@@ -4134,7 +4134,7 @@ public class CommonFunctions {
 	}
 
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify text present in an element
 	 * 
@@ -4148,7 +4148,7 @@ public class CommonFunctions {
 	 * @return
 	 * @throws InterruptedException 
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public boolean verifyLinkInPopUp(PageObjects pageObject,String linkToVerify)throws InterruptedException
 	{
@@ -4227,13 +4227,13 @@ public class CommonFunctions {
 		return false;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to wait for Page To be Ready
 	 * 
 	 *
 	 ************************************************************* 
-	 */
+	 *//*
 
 
 	public  void waitForPageToBeReady() 
@@ -4260,7 +4260,7 @@ public class CommonFunctions {
 			}   
 		}
 	}
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to Click on Element
 	 * 
@@ -4273,7 +4273,7 @@ public class CommonFunctions {
 	 *            be verified
 	 * @return
 	 ************************************************************* 
-	 */
+	 *//*
 	public void clickOnElementjavaScript(WebElement ele, String StrObjName)
 	{
 
@@ -4292,13 +4292,13 @@ public class CommonFunctions {
 
 
 	}
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify URL
 	 * 
 	 * @param String to be verified
 	 ************************************************************* 
-	 */
+	 *//*
 
 
 	public void verifyURL(String URL)
@@ -4316,13 +4316,13 @@ public class CommonFunctions {
 			//+ " Actual : " + driver.getCurrentUrl(), Status.FAIL);
 		}
 	}
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify URL contains
 	 * 
 	 * @param String to be verified
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public void verifyURLContains(String URL)
 	{
@@ -4340,13 +4340,13 @@ public class CommonFunctions {
 		}
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify Link in PopUp
 	 * 
 	 * @param String to be verified
 	 ************************************************************* 
-	 */
+	 *//*
 
 
 	public boolean verifyLinkInPopUp(WebElement element, String StrObjName,String linkToVerify)	throws InterruptedException
@@ -4403,7 +4403,7 @@ public class CommonFunctions {
 	}
 
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify text present in an element
 	 * 
@@ -4417,7 +4417,7 @@ public class CommonFunctions {
 	 * @return
 	 * @throws InterruptedException 
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public boolean verifyLinkDonotContainPopUpPageTitle(WebElement element, String StrObjName,String titleToVerify, String linkToVerify)	throws InterruptedException
 	{
@@ -4455,7 +4455,7 @@ public class CommonFunctions {
 		return false;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify text present in an element
 	 * 
@@ -4469,7 +4469,7 @@ public class CommonFunctions {
 	 * @return
 	 * @throws InterruptedException 
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public boolean verifyLinkDonotContainPopUp(WebElement element, String StrObjName,String linkToVerify)	throws InterruptedException
 	{
@@ -4497,7 +4497,7 @@ public class CommonFunctions {
 		return false;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify Link do not contain PpoUp
 	 * 
@@ -4506,7 +4506,7 @@ public class CommonFunctions {
 	 *@param pageObject            
 	 * 
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public boolean verifyLinkDonotContainPopUp(PageObjects pageObject,String linkToVerify)	throws InterruptedException
 	{
@@ -4550,7 +4550,7 @@ public class CommonFunctions {
 		return false;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify Link do not contain PpoUp Navigation
 	 * 
@@ -4559,7 +4559,7 @@ public class CommonFunctions {
 	 *@param pageObject            
 	 * 
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public boolean verifyLinkDonotContainPopUpNavigation(PageObjects pageObject,String linkToVerify)	throws InterruptedException
 	{
@@ -4620,7 +4620,7 @@ public class CommonFunctions {
 		return false;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify text present in an element
 	 * 
@@ -4634,7 +4634,7 @@ public class CommonFunctions {
 	 * @return
 	 * @throws InterruptedException 
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public boolean verifyGlobalLinkNavigationPageTilte(WebElement element, String StrObjName,String titleToVerify, String linkToVerify)	throws InterruptedException
 	{
@@ -4688,7 +4688,7 @@ public class CommonFunctions {
 		}
 		return false;
 	}
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify  Link and Page Title
 	 * 
@@ -4699,7 +4699,7 @@ public class CommonFunctions {
 	 *@param linkToVerify
 	 * 
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public boolean verifyGlobalLinkNavigationContainsPageTilte(WebElement element, String StrObjName,String titleToVerify, String linkToVerify)	throws InterruptedException
 	{
@@ -4753,7 +4753,7 @@ public class CommonFunctions {
 		}
 		return false;
 	}
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify Link Navigation
 	 * 
@@ -4767,7 +4767,7 @@ public class CommonFunctions {
 	 * @return
 	 * @throws InterruptedException 
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public boolean verifyGlobalLinkNavigation(WebElement element, String StrObjName,String linkToVerify)	throws InterruptedException
 	{
@@ -4810,7 +4810,7 @@ public class CommonFunctions {
 		return false;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify Link Navigation
 	 * 
@@ -4823,7 +4823,7 @@ public class CommonFunctions {
 	 *            be verified
 	 * @return
 	 * @throws InterruptedException 
-	 *************************************************************/
+	 *************************************************************//*
 
 	public boolean verifyGlobalLinkNavigation(PageObjects pageObject,String linkToVerify)	throws InterruptedException
 	{
@@ -4869,7 +4869,7 @@ public class CommonFunctions {
 		return false;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify Link In Window in an element
 	 * 
@@ -4883,7 +4883,7 @@ public class CommonFunctions {
 	 * @return
 	 * @throws InterruptedException 
 	 ************************************************************* 
-	 */
+	 *//*
 
 	public boolean verifyLinkInWindow(WebElement element, String StrObjName,String linkToVerify) throws IOException, InterruptedException
 	{
@@ -4891,8 +4891,8 @@ public class CommonFunctions {
 		{
 			String oldTab = driver.getWindowHandle();
 			element.click();
-			/* ArrayList<String> newTab = new ArrayList<String>(driver.getWindowHandles());
-                       newTab.remove(oldTab);*/
+			 ArrayList<String> newTab = new ArrayList<String>(driver.getWindowHandles());
+                       newTab.remove(oldTab);
 
 			String lastHandle="";
 			String winHandleBefore = driver.getWindowHandle();
@@ -4929,7 +4929,7 @@ public class CommonFunctions {
 		return false;
 
 	}
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify Link In Window
 	 * 
@@ -4942,7 +4942,7 @@ public class CommonFunctions {
 	 *            be verified
 	 * @return
 	 * @throws InterruptedException 
-	 *************************************************************/
+	 *************************************************************//*
 
 	public boolean verifyLinkInWindow(PageObjects pageObject,String linkToVerify) throws IOException, InterruptedException
 	{
@@ -4953,8 +4953,8 @@ public class CommonFunctions {
 
 			String oldTab = driver.getWindowHandle();
 			element.click();
-			/* ArrayList<String> newTab = new ArrayList<String>(driver.getWindowHandles());
-                       newTab.remove(oldTab);*/
+			 ArrayList<String> newTab = new ArrayList<String>(driver.getWindowHandles());
+                       newTab.remove(oldTab);
 
 			String lastHandle="";
 			String winHandleBefore = driver.getWindowHandle();
@@ -4993,7 +4993,7 @@ public class CommonFunctions {
 	}
 
 
-	/***************************************************************
+	*//***************************************************************
 	 * Function to verify text is not present in an element
 	 * 
 	 * @author sivka002
@@ -5004,7 +5004,7 @@ public class CommonFunctions {
 	 *            The {@text String} Attribute name of the element which is to
 	 *            be verified
 	 * @return boolean true - if element does not contain the text
-	 **************************************************************/
+	 **************************************************************//*
 
 	public boolean verifyElementPresentNotContainsText(WebElement element, String StrObjName, String textToVerify)
 			throws IOException{
@@ -5041,7 +5041,7 @@ public class CommonFunctions {
 		return false;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Method to verify an element state based on given input conditions
 	 * 
@@ -5057,7 +5057,7 @@ public class CommonFunctions {
 	 *            Y/N/<the actual text>
 	 * @return A boolean value indicating if the searched Element is found.
 	 ************************************************************* 
-	 */
+	 *//*
 	public boolean verifyElementState(WebElement elemToVerify, String strElemStateToVerify, String strExpValue,
 			String strObjName) throws IOException{
 
@@ -5092,13 +5092,13 @@ public class CommonFunctions {
 	}
 
 
-	/*****************************************************************
+	*//*****************************************************************
 	 * Inserts the character ch at the location index of string st
 	 * @param st
 	 * @param ch
 	 * @param index
 	 * @return a new string 
-	 *************************************************************/
+	 *************************************************************//*
 	public String insertCharAt(String st, char ch, int index){
 		//1 Exception if st == null
 		//2 Exception if index<0 || index>st.length()
@@ -5115,7 +5115,7 @@ public class CommonFunctions {
 	}
 
 
-	/************************************************************
+	*//************************************************************
 	 * Description: Function to validate items in a list
 	 * 
 	 * @param strPropertyValue
@@ -5127,7 +5127,7 @@ public class CommonFunctions {
 	 * @param strItemNames
 	 *            = items to be verified seperated by semi-colin(;) returns:
 	 *            nothing Author: VaibhavS
-	 ***********************************************************************/
+	 ***********************************************************************//*
 	public void verifyItemsInList(String strPropertyValue, String strPropType, String strObjName, String strItemNames){
 
 		try{
@@ -5164,7 +5164,7 @@ public class CommonFunctions {
 		}
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Method to verify multiple lines in a web-element text
 	 * 
@@ -5177,7 +5177,7 @@ public class CommonFunctions {
 	 *            The name of object for reference
 	 * @return
 	 ************************************************************* 
-	 */
+	 *//*
 	public boolean verifyMultiLine(WebElement element, String StrObjName, String textToVerify) throws IOException{
 
 		boolean blnFound = true;
@@ -5211,7 +5211,7 @@ public class CommonFunctions {
 		return false;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify Text Present
 	 * 
@@ -5224,7 +5224,7 @@ public class CommonFunctions {
 	 *            be verified
 	 * @return
 	 * @throws InterruptedException 
-	 *************************************************************/
+	 *************************************************************//*
 
 	public void verifyTextPresent(String strText) throws Exception{
 
@@ -5233,7 +5233,7 @@ public class CommonFunctions {
 
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to wait for element to be clicked
 	 * 
@@ -5246,7 +5246,7 @@ public class CommonFunctions {
 	 *            be verified
 	 * @return
 	 * @throws InterruptedException 
-	 *************************************************************/
+	 *************************************************************//*
 
 	public void waitForElementClickable(String xpathVal, long time){
 
@@ -5257,7 +5257,7 @@ public class CommonFunctions {
 			System.err.print(e.getMessage());
 		}
 	}
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to wait for an element to be visible
 	 * 
@@ -5270,7 +5270,7 @@ public class CommonFunctions {
 	 *            be verified
 	 * @return
 	 * @throws InterruptedException 
-	 *************************************************************/
+	 *************************************************************//*
 
 	public boolean waitForElementVisibility(String xpathVal, long time){
 
@@ -5289,13 +5289,13 @@ public class CommonFunctions {
 		}
 	}
 
-	/****************************************************
+	*//****************************************************
 	 * Method to synchronize until element is present
 	 * @param strElementValue - property value
 	 * @param strElementType - element locator type
 	 * @param time - synchronization timeout
 	 * @return true/false
-	 *************************************************/
+	 *************************************************//*
 	public boolean waitForElementPresence(String strElementValue, String strElementType, long time)
 	{
 
@@ -5334,14 +5334,14 @@ public class CommonFunctions {
 		}
 	}
 
-	/*********************************************************
+	*//*********************************************************
 	 * Method to wait for Element visibility
 	 * @param property - property value
 	 * @param locator - element locator type
 	 * @param time - synchronization timeout
 	 * @return true/false
 	 * *********************************************************
-	 */	
+	 *//*	
 	public boolean waitForElementVisibility(String locator, String property, long time, Boolean printError){
 			boolean result= false;
 		try{
@@ -5373,7 +5373,7 @@ public class CommonFunctions {
 			return result;	
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to wait for Element Visibility
 	 * 
@@ -5386,7 +5386,7 @@ public class CommonFunctions {
 	 *            be verified
 	 * @return
 	 * @throws InterruptedException 
-	 *************************************************************/
+	 *************************************************************//*
 	public boolean waitForElementVisibility(PageObjects pageObject, long time, Boolean printError){
 		String locator = pageObject.getLocatorType().toString();
 		String property = pageObject.getProperty();
@@ -5420,7 +5420,7 @@ public class CommonFunctions {
 		return result;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify whether Element is present Inside Element
 	 * 
@@ -5433,7 +5433,7 @@ public class CommonFunctions {
 	 *            be verified
 	 * @return
 	 * @throws InterruptedException 
-	 *************************************************************/
+	 *************************************************************//*
 
 	public boolean isElementPresentInsideElement(WebElement parentElement, String strObjectProperty,
 			String strFindElementType){
@@ -5470,11 +5470,11 @@ public class CommonFunctions {
 		}
 	}
 
-	/****************************************
+	*//****************************************
 	 * Method to Arrow down a page
 	 * @author Priya
 	 * @modified 11 November 2014
-	 ***********************************/
+	 ***********************************//*
 	public void ArrowDownNo(int no) throws NoSuchWindowException
 	{
 
@@ -5485,11 +5485,11 @@ public class CommonFunctions {
 		}
 	}
 
-	/****************************************
+	*//****************************************
 	 * Method to Arrow Up a page
 	 * @author Priya
 	 * @modified 11 November 2014
-	 ***********************************/
+	 ***********************************//*
 	public void ArrowUpNo(int no) throws NoSuchWindowException
 	{
 
@@ -5499,7 +5499,7 @@ public class CommonFunctions {
 			action.sendKeys(Keys.ARROW_UP).perform();
 		}
 	}
-	/************************************************************************
+	*//************************************************************************
 	 * 
 	 * This function returns the width of the current driver window
 	 * 
@@ -5509,14 +5509,14 @@ public class CommonFunctions {
 	 * @author 387478
 	 * @created on 6 Jan 2014
 	 *************************************************************************
-	 **/
+	 **//*
 
 	public int getWidth(){
 		return driver.manage().window().getSize().width;
 	}
 
 
-	/************************************************************************
+	*//************************************************************************
 	 * getRWDView
 	 * This function returns the RWD view in which the browser is opened
 	 * 
@@ -5533,7 +5533,7 @@ public class CommonFunctions {
 	 * @author 387478
 	 * @created on 6 Jan 2014
 	 *************************************************************************
-	 **/
+	 **//*
 
 	public String getRWDView(){
 		int width = getWidth();
@@ -5549,7 +5549,7 @@ public class CommonFunctions {
 	}
 
 
-	/************************************************************************
+	*//************************************************************************
 	 * getEnvironment
 	 * Read environment from properties file and return it
 	 * 
@@ -5559,13 +5559,13 @@ public class CommonFunctions {
 	 * @author 387478
 	 * @created on 6 Jan 2014
 	 *************************************************************************
-	 **/
+	 **//*
 
 	public String getEnvironment(){
 		return properties.getProperty("Environment");
 	}  	
 
-	/************************************************************************
+	*//************************************************************************
 	 * getTimeout
 	 * Read timeout from properties file and return it
 	 * 
@@ -5575,7 +5575,7 @@ public class CommonFunctions {
 	 * @author 387478
 	 * @created on 6 Jan 2014
 	 *************************************************************************
-	 **/
+	 **//*
 
 	public int getTimeout(){
 		int timeout = 60;
@@ -5588,7 +5588,7 @@ public class CommonFunctions {
 	}  	
 
 
-	/************************************************************************
+	*//************************************************************************
 	 * formatSSN
 	 * Convert input ssn to 4 digits and return
 	 * e.g. 330 will be converted to 0330
@@ -5599,7 +5599,7 @@ public class CommonFunctions {
 	 * @author 387478
 	 * @created on 6 Jan 2014
 	 *************************************************************************
-	 **/
+	 **//*
 	public String formatSSN(String ssn){
 		try{
 			if(ssn.length()> 0 && ssn.length()<4)
@@ -5611,7 +5611,7 @@ public class CommonFunctions {
 	}
 
 
-	/************************************************************************
+	*//************************************************************************
 	 * formatAccountNumber
 	 * Convert input AccountNumber to 10 digits and return
 	 * e.g. 123456789 will be converted to 0123456789
@@ -5622,7 +5622,7 @@ public class CommonFunctions {
 	 * @author 387478
 	 * @created on 6 Jan 2014
 	 *************************************************************************
-	 **/
+	 **//*
 	public String formatAccountNumber(String accountNumber){
 		try{
 			if(accountNumber.length()> 0 && accountNumber.length()<10)
@@ -5633,7 +5633,7 @@ public class CommonFunctions {
 		return accountNumber;
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to get Page Element
 	 * 
@@ -5643,7 +5643,7 @@ public class CommonFunctions {
 	 * 	 * 
 	 * @return
 	 * @throws InterruptedException 
-	 *************************************************************/
+	 *************************************************************//*
 	public  WebElement getPageElement(PageObjects pageObject)
 	{
 		try{           
@@ -5664,7 +5664,7 @@ public class CommonFunctions {
 		}
 	}
 
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify Element is Disabled
 	 * 
@@ -5674,7 +5674,7 @@ public class CommonFunctions {
 	 * 	 * 
 	 * @return
 	 * @throws Exception 
-	 *************************************************************/
+	 *************************************************************//*
 	public void verifyElementDisebled(PageObjects pageObject, String value)throws Exception
 	{
 		String strObjName = pageObject.getObjectname();
@@ -5693,7 +5693,7 @@ public class CommonFunctions {
 		}
 
 	}
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify Element is Displayed
 	 * 
@@ -5703,7 +5703,7 @@ public class CommonFunctions {
 	 *
 	 * @return
 	 * @throws Exception 
-	 *************************************************************/
+	 *************************************************************//*
 
 	public boolean isDisplayed(PageObjects pageObject){
 		try{
@@ -5719,7 +5719,7 @@ public class CommonFunctions {
 			}
 		return true;
 	}
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify Element is Displayed
 	 * 
@@ -5729,7 +5729,7 @@ public class CommonFunctions {
 	 * @param writeTestLog
 	 * @return
 	 * @throws Exception 
-	 *************************************************************/
+	 *************************************************************//*
 
 	public boolean isDisplayed(PageObjects pageObject,Boolean writeTestLog){
 
@@ -5745,7 +5745,7 @@ public class CommonFunctions {
 			}
 		return isDisplayed;
 	}
-	/**
+	*//**
 	 ************************************************************* 
 	 * Function to verify Element is not Displayed
 	 * 
@@ -5755,7 +5755,7 @@ public class CommonFunctions {
 	 * @param writeTestLog
 	 * @return
 	 * @throws Exception 
-	 *************************************************************/
+	 *************************************************************//*
 
 
 	public boolean isNotDisplayed(PageObjects pageObject, Boolean writereport, int timeToSearch){
@@ -5798,7 +5798,7 @@ return false;
 
 }
 
-/**
+*//**
  ************************************************************* 
  * Function to verify Element is Displayed with out Screen shot
  * 
@@ -5808,7 +5808,7 @@ return false;
  * @param writeTestLog
  * @return
  * @throws Exception 
- *************************************************************/
+ *************************************************************//*
 
 
 public boolean isDisplayedWithoutScreenshot(PageObjects pageObject){
@@ -5825,7 +5825,7 @@ public boolean isDisplayedWithoutScreenshot(PageObjects pageObject){
 	return true;
 
 }
-/**
+*//**
  ************************************************************* 
  * Function to verify Element is Selected
  * 
@@ -5835,14 +5835,14 @@ public boolean isDisplayedWithoutScreenshot(PageObjects pageObject){
  * 
  * @return
  * @throws Exception 
- *************************************************************/
+ *************************************************************//*
 
 public boolean isSelected(PageObjects pageObject){
 	WebElement element = getPageElement(pageObject);
 	return element.isSelected();
 }
 
-/**
+*//**
  ************************************************************* 
  * Function to HighLight Element 
  * 
@@ -5852,7 +5852,7 @@ public boolean isSelected(PageObjects pageObject){
  * @param writeTestLog
  * @return
  * @throws Exception 
- *************************************************************/
+ *************************************************************//*
 
 
 public void highlightElement(WebElement element) throws InterruptedException 
@@ -5864,12 +5864,12 @@ public void highlightElement(WebElement element) throws InterruptedException
 	js.executeScript("arguments[0].setAttribute('style', arguments[1]);", element, "");
 }
 
-/***************************************************************
+*//***************************************************************
  * Function to Scroll down on web page
  * @return 
  * @Modified by pxg0fzc on 29 October
  ***************************************************************
- */
+ *//*
 public boolean scrollDownPage() throws Exception
 {
 	String browsername=browsername();
@@ -5882,12 +5882,12 @@ public boolean scrollDownPage() throws Exception
 	return false;
 
 }
-/***************************************************************
+*//***************************************************************
  * Function to Scroll down on web page
  * @return 
  * @Modified by pxg0fzc on 29 October
  ***************************************************************
- */
+ *//*
 public boolean scrollUpPage() throws Exception
 {
 	String browsername=browsername();
@@ -5909,13 +5909,13 @@ public boolean scrollUpPage() throws Exception
 }
 
 //get the current browser version
-/**
+*//**
  ************************************************************* 
  * Function to verify Browser name
  * 
  * @return
  * @throws Exception 
- *************************************************************/
+ *************************************************************//*
 
 public String browsername()
 {
@@ -5925,13 +5925,13 @@ public String browsername()
 	//System.out.println(browserName);
 	return browserName;
 }
-/**
+*//**
  ************************************************************* 
  * Function to verify Execution mode
  * 
  * @return executionmode
  * @throws Exception 
- *************************************************************/
+ *************************************************************//*
 
 
 public String executionmode()
@@ -5940,13 +5940,13 @@ public String executionmode()
 	//System.out.println(executionmode);
 	return executionmode;
 }
-/**
+*//**
  ************************************************************* 
  * Function to verify Link In New Tab
  * @param pageObject
  * @param URL
  * @throws Exception 
- *************************************************************/
+ *************************************************************//*
 
 public void linkInNewTab(PageObjects pageObject, String URL)
 {
@@ -5987,13 +5987,13 @@ public void linkInNewTab(PageObjects pageObject, String URL)
 public WebDriver getWebDriver() {
 	return getWebDriver();
 }
-/**
+*//**
  ************************************************************* 
  * Function to verify Explicit Wait
  * @param pageObject
  * 
  * @throws Exception 
- *************************************************************/
+ *************************************************************//*
 
 public void explicitWait(PageObjects pageObject){
 	try{
@@ -6010,13 +6010,13 @@ public void explicitWait(PageObjects pageObject){
 	}
 }
 
-/**
+*//**
  ************************************************************* 
  * Function to verify Explicit Wait
  * @param element
  * 
  * @throws Exception 
- *************************************************************/
+ *************************************************************//*
 
 public void explicitWait(WebElement element){
 	try{
@@ -6032,13 +6032,13 @@ public void explicitWait(WebElement element){
 	}
 }
 
-/**
+*//**
  ************************************************************* 
  * Function to verify Explicit Wait Clickable
  * @param element
  * 
  * @throws Exception 
- *************************************************************/
+ *************************************************************//*
 public void explicitWaitClickAble(PageObjects pageObject){
 	try{
 		WebDriverWait wait=new WebDriverWait(driver,60);
@@ -6055,12 +6055,12 @@ public void explicitWaitClickAble(PageObjects pageObject){
 
 
 
-/***************************************************
+*//***************************************************
  *Function to  Scroll to  specific element
  ** @param element
  * 
  * @throws Exception 
- *************************************************************/ 
+ *************************************************************//* 
 
 
 public void scrollToSpecificElemnt(WebElement element)
@@ -6071,12 +6071,12 @@ public void scrollToSpecificElemnt(WebElement element)
 	executor.executeScript("arguments[0].scrollIntoView(true);", element);
 }
 
-/***************************************************
+*//***************************************************
  *Function to  verify Link and Switch in New Tab
  ** @param element
  * 
  * @throws Exception 
- *************************************************************/ 
+ *************************************************************//* 
 
 public void  verifyLinkAndSwitchInNewTabjavaScript(PageObjects pageObject,String linkToVerify) throws InterruptedException
 {
@@ -6128,12 +6128,12 @@ public void  verifyLinkAndSwitchInNewTabjavaScript(PageObjects pageObject,String
 	}
 	closeAllOtherWindows(han);
 }
-/***************************************************
+*//***************************************************
  *Function to  extract Number
  ** @param element
  * 
  * @throws Exception 
- *************************************************************/ 
+ *************************************************************//* 
 
 
 public static String extractNumber(final String str) {                
@@ -6154,12 +6154,12 @@ public static String extractNumber(final String str) {
 
 	return sb.toString();
 }
-/***************************************************
+*//***************************************************
  *Function to verify Global Link Navigation
  ** @param element
  * 
  * @throws Exception 
- *************************************************************/ 
+ *************************************************************//* 
 
 
 public boolean verifyGlobalLinkNavigation(WebElement element, String StrObjName,String titleToVerify, String linkToVerify)	throws InterruptedException
@@ -6234,12 +6234,12 @@ public boolean verifyGlobalLinkNavigation(WebElement element, String StrObjName,
 	}
 	return false;
 }
-/***************************************************
+*//***************************************************
  *Function to  verify Mouse action
  ** @param element
  * 
  * @throws Exception 
- *************************************************************/ 
+ *************************************************************//* 
 
 
 public boolean onMouseOver(WebElement element)
@@ -6261,13 +6261,13 @@ public boolean onMouseOver(WebElement element)
 	return result;
 }
 
-/**************************************
+*//**************************************
  * Mouse action for all browsers
  * 
  * @param driver
  * @param element
  * @param locator
- *****************************/
+ *****************************//*
 
 public void moveToElement(WebDriver driver, WebElement element, By locator) {
 	if (!(driver instanceof SafariDriver)) {
@@ -6294,12 +6294,12 @@ public void moveToElement(WebDriver driver, WebElement element, By locator) {
 		js.executeScript(mouseOverScript);
 	}
 }
-/***************************************************
+*//***************************************************
  *Function to highlight element
  ** @param element
  * 
  * @throws Exception 
- *************************************************************/ 
+ *************************************************************//* 
 
 
 public void highLightElement(WebElement elemToEnter)
@@ -6313,13 +6313,13 @@ public void highLightElement(WebElement elemToEnter)
 
 }
 
-/***************************************************
+*//***************************************************
  *Function to  verify attribute contains value
  ** @param pageObject
  * @param attributeName
  * @param attributeValue
  * @throws Exception 
- *************************************************************/ 
+ *************************************************************//* 
 
 public void verifyAttruibuteContainsValue(PageObjects pageObject,String attributeName, String attributeValue) {
 	String StrObjName = pageObject.getObjectname();
@@ -6333,12 +6333,12 @@ public void verifyAttruibuteContainsValue(PageObjects pageObject,String attribut
 
 }
 
-/***************************************************
+*//***************************************************
  *Function to  verify element not Displayed
  ** @param pageObject
 
  * @throws Exception 
- *************************************************************/ 
+ *************************************************************//* 
 public void verifyElementNotDisplayed(PageObjects pageObject)
 {
 	String StrObjName = pageObject.getObjectname();
@@ -6357,13 +6357,13 @@ public void verifyElementNotDisplayed(PageObjects pageObject)
 
 }	
 
-/***************************************************
+*//***************************************************
  *Function to  verify mainframe validation
  ** @param pageObject
 
  * @throws Exception 
- *************************************************************/ 
-/*public void mainframeValidations(String sql, String Columns, String Expected) throws SQLException
+ *************************************************************//* 
+public void mainframeValidations(String sql, String Columns, String Expected) throws SQLException
 {
 
 	Map testData = DatabaseUtil.executeDB2Query(sql);
@@ -6382,15 +6382,15 @@ public void verifyElementNotDisplayed(PageObjects pageObject)
 		verifyText(expectedArray[i], data1, valuesarray[i]);
 	}
 
-}*/
+}
 
-/***************************************************
+*//***************************************************
  *Function to  verify oracle mainframe validation
  ** @param pageObject
 
  * @throws Exception 
- *************************************************************/ 
-/*public void oraclemainframeValidations(String sql, String Columns, String Expected) throws SQLException
+ *************************************************************//* 
+public void oraclemainframeValidations(String sql, String Columns, String Expected) throws SQLException
 {
 
 	Map testData = DatabaseUtil.executeOracleQuery(sql, Databases.SECURITY);
@@ -6411,15 +6411,15 @@ public void verifyElementNotDisplayed(PageObjects pageObject)
 		verifyText(expectedArray[i], data1, valuesarray[i]);
 	}
 
-}*/
+}
 
-/***************************************************
+*//***************************************************
  *Function to  verify oracle mainframe validation
  ** @param pageObject
 
  * @throws Exception 
- *************************************************************/ 
-/*public  List<Map<String, Object>> oraclemainframeValidation(String sql, String Columns, String Expected) throws SQLException
+ *************************************************************//* 
+public  List<Map<String, Object>> oraclemainframeValidation(String sql, String Columns, String Expected) throws SQLException
 {
 
 	//	Map testData = DatabaseUtil.executeOracleQuery(sql, Databases.SECURITY);
@@ -6452,13 +6452,13 @@ public void verifyElementNotDisplayed(PageObjects pageObject)
 
 
 	return SecurityData;
-}*/
-/***************************************************
+}
+*//***************************************************
  *Function to  verify Element Place Holder
  ** @param pageObject
 
  * @throws Exception 
- *************************************************************/ 
+ *************************************************************//* 
 public void verifyElementPlaceholder(PageObjects pageObject, String textToVerify) throws IOException
 {
 	WebElement element = getPageElement(pageObject); 
@@ -6473,14 +6473,14 @@ public void verifyElementPlaceholder(PageObjects pageObject, String textToVerify
 	}
 
 }
-/***************************************************
+*//***************************************************
  *Function to  verify Text
  ** @param Expected
  *@param Actual
  *@param ObjectName
 
  * @throws Exception 
- *************************************************************/ 
+ *************************************************************//* 
 public void verifyTextEqual(String Expected , String Actual,String ObjectName)
 {
 	if(Expected.trim().equalsIgnoreCase(Actual.trim()))
@@ -6492,14 +6492,14 @@ public void verifyTextEqual(String Expected , String Actual,String ObjectName)
 	}
 }
 
-/***************************************************
+*//***************************************************
  *Function to  verify Element Color
  ** @param pageObject
  *@param property
  *@param CSSValue
 
  * @throws Exception 
- *************************************************************/ 
+ *************************************************************//* 
 
 public void verifyElementColor(PageObjects pageObject, String property, String CSSValue)
 {
@@ -6517,13 +6517,13 @@ public void verifyElementColor(PageObjects pageObject, String property, String C
 
 }
 
-/***************************************************
+*//***************************************************
  *Function to verify  element not Displayed
  ** @param pageObject
 
  * @throws Exception 
- *************************************************************/ 
-/*
+ *************************************************************//* 
+
 public boolean  isNotDisplayed(PageObjects pageObject)
 {
 
@@ -6543,14 +6543,14 @@ public boolean  isNotDisplayed(PageObjects pageObject)
 	return value;
 
 
-}*/
+}
 
-/***************************************************
+*//***************************************************
  *Function to verify Wait 
  ** @param pageObject
 
  * @throws Exception 
- *************************************************************/ 
+ *************************************************************//* 
 public void waitforBusy(WebDriver Driver){
 	try{
 		WebDriverWait wait = new WebDriverWait(Driver, 59);
@@ -6566,12 +6566,12 @@ public void waitforBusy(WebDriver Driver){
 		//System.out.println(e);
 	}
 }
-/***************************************************
+*//***************************************************
  *Function to verify Element Presence
  ** @param pageObject
 
  * @throws Exception 
- *************************************************************/ 
+ *************************************************************//* 
 public void waitforElePresence(By by, WebDriver Driver){
 	try{
 		final By byy=by;
@@ -6591,12 +6591,12 @@ public void waitforElePresence(By by, WebDriver Driver){
 	}
 }
 
-/***************************************************
+*//***************************************************
  *Function to match with Regex
  ** @param pageObject
 
  * @throws Exception 
- *************************************************************/ 
+ *************************************************************//* 
 
 public void mathwithRegx(String textToVerify , String regx)
 {
@@ -6616,17 +6616,17 @@ public void mathwithRegx(String textToVerify , String regx)
 }
 
 
-/*RegX for Username and Account number
+RegX for Username and Account number
  * 
- */
-/***************************************************
+ 
+*//***************************************************
  *Function to verify RegX for Username and Account number
  ** @param conten
  *@param pattern
  *@param  logString
 
  * @throws Exception 
- *************************************************************/ 
+ *************************************************************//* 
 public void regxmathcher(String conten, String pattern, String logString)
 {
 	String content = conten;
@@ -6643,12 +6643,12 @@ public void regxmathcher(String conten, String pattern, String logString)
 	}
 
 }
-/***************************************************
+*//***************************************************
  *Function to sendkeys to tab
  *@param pageObject
 
  * @throws Exception 
- *************************************************************/ 
+ *************************************************************//* 
 
 public void  tabOut(PageObjects pageObject)
 {
@@ -6661,12 +6661,12 @@ public void  tabOut(PageObjects pageObject)
 
 }	
 
-/***************************************************
+*//***************************************************
  *Function to verify drop down option and select a particular value
  *@param pageObject
 
  * @throws Exception 
- *************************************************************/ 
+ *************************************************************//* 
 
 public void verifyDropdown( List<WebElement> droOpetion , String drpvalues,String valueToSelect)
 {
@@ -6704,12 +6704,12 @@ public void verifyDropdown( List<WebElement> droOpetion , String drpvalues,Strin
 
 }
 
-/***************************************************
+*//***************************************************
  *Function to Scroll Down Page In Mobile
  *@param String amountToBeScrolledDown
 
  * @throws Exception 
- *************************************************************/ 
+ *************************************************************//* 
 
 
 public void scrollPageDownMobile(String amountToBeScrolledDown)
@@ -6718,12 +6718,12 @@ public void scrollPageDownMobile(String amountToBeScrolledDown)
 	View.executeScript("window.scrollBy(0,"+amountToBeScrolledDown+")");
 }
 
-/***************************************************
+*//***************************************************
  *Function to Scroll Page  UP In Mobile
  *@param String amountToBeScrolledDown
 
  * @throws Exception 
- *************************************************************/ 
+ *************************************************************//* 
 
 
 public void scrollPageUpMobile(String amountToBeScrolledDown)
@@ -6732,12 +6732,12 @@ public void scrollPageUpMobile(String amountToBeScrolledDown)
 	View.executeScript("window.scrollBy(0,"+"-"+amountToBeScrolledDown+")");
 }
 
-/***************************************************
+*//***************************************************
  *Function to Scroll Till Element is displayed in  Mobile
  *@param String element
 
  * @throws Exception 
- *************************************************************/ 
+ *************************************************************//* 
 
 public void scrollTillElementIsDisplayed( String element)
 {
@@ -6749,13 +6749,13 @@ public void scrollTillElementIsDisplayed( String element)
 	}
 }
 
-/***************************************************
+*//***************************************************
  *Function to Close PopUp  window
 
  *@param String amountToBeScrolledDown
 
  * @throws Exception 
- *************************************************************/ 
+ *************************************************************//* 
 
 public void loginPopupsHandle()
 {
@@ -6780,13 +6780,13 @@ public void loginPopupsHandle()
 	}
 }
 
-/***************************************************
+*//***************************************************
  *Function to Check if String is Ten digit
 
  *@param String acc
 
  * @throws Exception 
- *************************************************************/ 
+ *************************************************************//* 
 
 public String checkifStringIsTenDigit(String acc)
 {
@@ -6796,21 +6796,21 @@ public String checkifStringIsTenDigit(String acc)
 	return b;
 }
 
-/***************************************************
+*//***************************************************
  *Function to get random value
 
 
- *************************************************************/ 
+ *************************************************************//* 
 
 public  int getRandom(int max){ 
 
 	return (int) (Math.random()*max);
 }
-/***************************************************
+*//***************************************************
  *Function to open New Tab
 
  * @throws Exception 
- *************************************************************/ 
+ *************************************************************//* 
 
 public void openblanknewTab() throws AWTException
 {
@@ -6818,13 +6818,13 @@ public void openblanknewTab() throws AWTException
 	((JavascriptExecutor)driver).executeScript("window.open();");
 }
 
-/***************************************************
+*//***************************************************
  *Function to switch to blank window
 
  *@param String index
 
  * @throws Exception 
- *************************************************************/ 
+ *************************************************************//* 
 public void switchToBlankWindow(String index)
 {
 	Integer a = Integer.parseInt(index);
@@ -6832,26 +6832,26 @@ public void switchToBlankWindow(String index)
 	driver.switchTo().window(tabs.get(a));
 	//report.updateTestLog("", "New window is opened ", Status.SCREENSHOT);
 }
-/***************************************************
+*//***************************************************
  *Function to get SSN in regular Format
 
  *@param String originalString
 
  * @throws Exception 
- *************************************************************/ 
+ *************************************************************//* 
 
 public String getSSNinReqFormat(String originalString)
 {
 	return originalString.substring(originalString.length()-4);
 }
 
-/***************************************************
+*//***************************************************
  *Function to scroll to element
 
  *@param String pixel
 
  * @throws Exception 
- *************************************************************/ 
+ *************************************************************//* 
 public void scrollToElementjavaScript(String pixel)
 {
 
@@ -6872,3 +6872,4 @@ public void scrollToElementjavaScript(String pixel)
 
 
 }
+*/

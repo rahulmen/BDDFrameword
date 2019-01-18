@@ -1,4 +1,4 @@
-package com.CucumberFramework.supportLibraries;
+/*package com.CucumberFramework.supportLibraries;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +14,7 @@ public class SeeTestDriverFactory {
 
 	}
 
-	/**
+	*//**
 	 * Function to return the appropriate {@link WebDriver} object based on the
 	 * parameters passed
 	 * 
@@ -24,7 +24,7 @@ public class SeeTestDriverFactory {
 	 * @param browser
 	 *            The {@link MobilePlatform} to be used for the test execution
 	 * @return The corresponding {@link WebDriver} object
-	 */
+	 *//*
 	public static MobileWebDriver getSeeTestDriver(String host, int port, String projectBaseDirectory,
 			String reportFormat, String reportDirectory, String testName, MobileExecutionPlatform executionPlatform,
 			String AndroidAppName, String iOSAppName, String androidWebAppName, String iosWebAppName,
@@ -68,3 +68,4 @@ public class SeeTestDriverFactory {
 	}
 
 }
+*/

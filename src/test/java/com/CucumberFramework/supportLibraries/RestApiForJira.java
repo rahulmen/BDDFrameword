@@ -1,7 +1,5 @@
 package com.CucumberFramework.supportLibraries;
 
-import java.io.File;
-import java.io.IOException;
 import java.security.SecureRandom;
 import java.security.cert.X509Certificate;
 import java.util.Properties;
@@ -10,14 +8,6 @@ import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
-
-import org.apache.http.HttpEntity;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.mime.MultipartEntityBuilder;
-import org.apache.http.entity.mime.content.FileBody;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
 
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
@@ -62,7 +52,7 @@ public class RestApiForJira {
 		}
 	}
 
-	public static void createLog(String summary, String description,
+	/*public static void createLog(String summary, String description,
 			String screenShotPath) {
 		try {
 			certifiacteHandle();
@@ -98,8 +88,8 @@ public class RestApiForJira {
 
 		}
 	}
-
-	public static boolean addAttachmentToIssue(String issueKey,
+*/
+	/*public static boolean addAttachmentToIssue(String issueKey,
 			String screenShotPath) throws IOException {
 		certifiacteHandle();
 		String jira_attachment_authentication = new String(
@@ -134,7 +124,7 @@ public class RestApiForJira {
 			return false;
 		}
 
-	}
+	}*/
 
 	private static void certifiacteHandle() {
 		TrustManager[] trustAllCerts = new TrustManager[] { new X509TrustManager() {
